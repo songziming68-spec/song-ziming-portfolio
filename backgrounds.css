@@ -1,0 +1,99 @@
+/* Full-width light planes echo the homepage without changing content geometry. */
+#works,
+#category-details,
+#about,
+#resume,
+#contact {
+  isolation: isolate;
+  --light-main: 162, 211, 229;
+  --light-secondary: 211, 222, 225;
+  --light-angle: 116deg;
+  --light-origin: 42%;
+  --light-duration: 24s;
+  --light-delay: -5s;
+}
+
+#works::after,
+#category-details::after,
+#about::after,
+#resume::after,
+#contact::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: -1;
+  width: 100vw;
+  height: 100%;
+  max-height: 1100px;
+  transform: translateX(-50%);
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, #03060c 0%, transparent 20%, transparent 76%, #03060c 100%),
+    linear-gradient(var(--light-angle), transparent 18%, rgba(var(--light-main), .035) 35%, rgba(var(--light-main), .15) var(--light-origin), transparent calc(var(--light-origin) + 15%)),
+    linear-gradient(calc(var(--light-angle) + 28deg), transparent 54%, rgba(var(--light-secondary), .065) 68%, transparent 84%);
+  animation: portfolio-background-breathe var(--light-duration) ease-in-out var(--light-delay) infinite;
+}
+
+#works { --light-origin: 46%; --light-delay: -3s; }
+#category-details { --light-main: 144, 174, 180; --light-secondary: 219, 223, 220; --light-angle: 68deg; --light-origin: 36%; --light-delay: -9s; }
+#about { --light-main: 198, 204, 214; --light-secondary: 164, 191, 188; --light-angle: 126deg; --light-origin: 65%; --light-duration: 28s; --light-delay: -14s; }
+#resume { --light-main: 175, 192, 187; --light-secondary: 201, 197, 204; --light-angle: 54deg; --light-origin: 44%; --light-duration: 30s; --light-delay: -7s; }
+#contact { --light-main: 165, 212, 218; --light-secondary: 229, 229, 220; --light-angle: 112deg; --light-origin: 61%; --light-duration: 26s; --light-delay: -18s; }
+
+#category-details > [data-category-item] {
+  position: relative;
+  isolation: isolate;
+  --project-light: 181, 199, 204;
+  --project-reflection: 197, 205, 215;
+  --project-angle: 124deg;
+  --project-origin: 77%;
+}
+
+#category-details > [data-category-item]::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: -1;
+  width: 100vw;
+  height: 100%;
+  max-height: 1250px;
+  transform: translateX(-50%);
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, transparent 0%, transparent 68%, #03060c 100%),
+    linear-gradient(var(--project-angle), transparent 28%, rgba(var(--project-light), .025) 56%, rgba(var(--project-light), .12) var(--project-origin), transparent 96%),
+    linear-gradient(calc(var(--project-angle) - 44deg), transparent 7%, rgba(var(--project-reflection), .055) 18%, transparent 34%);
+}
+
+#category-details > #project-qingyun { --project-light: 152, 196, 176; --project-reflection: 203, 215, 207; --project-angle: 118deg; }
+#category-details > #project-milkpowder { --project-light: 190, 193, 203; --project-reflection: 180, 196, 210; --project-angle: 66deg; --project-origin: 69%; }
+#category-details > #project-concert { --project-light: 148, 200, 216; --project-reflection: 223, 207, 167; --project-angle: 130deg; --project-origin: 82%; }
+#category-details > #project-yexing { --project-light: 112, 195, 188; --project-reflection: 198, 143, 154; --project-angle: 112deg; --project-origin: 76%; }
+#category-details > #project-spanish { --project-light: 196, 188, 206; --project-reflection: 184, 213, 218; --project-angle: 62deg; --project-origin: 72%; }
+#category-details > #aigc-archive { --project-light: 168, 187, 182; --project-reflection: 194, 207, 213; --project-angle: 126deg; }
+#category-details > #project-photography { --project-light: 167, 188, 165; --project-reflection: 214, 215, 203; --project-angle: 68deg; --project-origin: 74%; }
+#category-details > #project-other { --project-light: 176, 185, 205; --project-reflection: 207, 195, 203; --project-angle: 120deg; --project-origin: 84%; }
+
+@keyframes portfolio-background-breathe {
+  0%, 100% { opacity: .58; }
+  50% { opacity: 1; }
+}
+
+@media (max-width: 700px) {
+  #works::after,
+  #category-details::after,
+  #about::after,
+  #resume::after,
+  #contact::after { max-height: 900px; opacity: .75; animation: none; }
+  #category-details > [data-category-item]::before { max-height: 900px; opacity: .75; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #works::after,
+  #category-details::after,
+  #about::after,
+  #resume::after,
+  #contact::after { animation: none; opacity: .75; }
+}

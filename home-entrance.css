@@ -1,0 +1,8 @@
+/* The static homepage remains visible when entrance animation is unavailable. */
+.home-cover .hero-content > * {
+  animation: none;
+}
+
+.home-cover .home-name-word > span {
+  display: inline-block;
+}

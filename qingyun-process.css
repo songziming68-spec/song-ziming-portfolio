@@ -1,0 +1,27 @@
+#qingyun-process { border-top: 1px solid rgba(255,255,255,.14); padding-top: 48px; }
+#qingyun-process .qingyun-process-heading { max-width: 800px; margin: 0 auto 28px; text-align: center; }
+#qingyun-process .qingyun-process-kicker { margin: 0 0 12px; color: #8e99a5; font-size: 12px; line-height: 1.6; letter-spacing: 0; }
+#qingyun-process h3 { margin: 0; color: #e1e5e9; font-size: 32px; font-weight: 500; line-height: 1.4; letter-spacing: 0; overflow-wrap: break-word; }
+#qingyun-process h4 { margin: 0 0 18px; color: #dce1e6; font-size: 25px; font-weight: 500; line-height: 1.5; letter-spacing: 0; overflow-wrap: break-word; }
+#qingyun-process .qingyun-process-heading > p:not(.qingyun-process-kicker) { margin: 0; color: #a8b1bc; font-size: 15px; line-height: 1.85; overflow-wrap: break-word; }
+#qingyun-process .qingyun-process-block { padding: 44px 0; border-top: 1px solid rgba(255,255,255,.1); }
+#qingyun-process .qingyun-process-block:first-of-type { border-top: 0; padding-top: 16px; }
+#qingyun-process .qingyun-process-block:last-child { padding-bottom: 0; }
+#qingyun-process .qingyun-process-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 28px; align-items: start; }
+#qingyun-process figure { min-width: 0; margin: 0; }
+#qingyun-process .qingyun-process-image { display: block; width: 100%; padding: 0; border: 0; border-radius: 3px; aspect-ratio: 16 / 9; background: #03060c; overflow: hidden; cursor: zoom-in; }
+#qingyun-process .qingyun-process-image:focus-visible { outline: 2px solid #e1e7ed; outline-offset: 5px; }
+#qingyun-process .qingyun-process-image img { display: block; width: 100%; height: 100%; object-fit: contain; }
+#qingyun-process .qingyun-storyboard-grid .qingyun-process-image { aspect-ratio: 1029 / 606; }
+#qingyun-process .qingyun-production-grid { grid-template-columns: repeat(3,minmax(0,1fr)); }
+#qingyun-process .qingyun-production-grid .qingyun-process-image { aspect-ratio: 4 / 3; }
+#qingyun-process figcaption { margin-top: 12px; color: #8f9ca9; font-size: 12px; line-height: 1.8; text-align: center; overflow-wrap: break-word; }
+@media (max-width: 640px) {
+  #qingyun-process { padding-top: 32px; }
+  #qingyun-process .qingyun-process-heading { margin-bottom: 24px; }
+  #qingyun-process h3 { font-size: 26px; }
+  #qingyun-process h4 { font-size: 22px; }
+  #qingyun-process .qingyun-process-block { padding: 32px 0; }
+  #qingyun-process .qingyun-process-grid { grid-template-columns: minmax(0,1fr); gap: 24px; }
+  #qingyun-process .qingyun-production-grid { grid-template-columns: minmax(0,1fr); }
+}

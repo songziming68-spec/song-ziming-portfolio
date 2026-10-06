@@ -1,169 +1,155 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#03060c" />
-    <meta name="color-scheme" content="dark" />
-    <meta name="robots" content="index, follow" />
-    <title>宋梓铭 | AI 影视创作者作品集</title>
-    <meta
-      name="description"
-      content="宋梓铭的 AI 影视创作作品集，展示 AIGC 视频、影视广告、舞台视觉、微电影与视觉作品。"
-    />
-    <link rel="stylesheet" href="styles.css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#03060c">
+    <meta name="color-scheme" content="dark">
+    <meta name="robots" content="index, follow">
+    <title data-i18n="宋梓铭 | 影像与视觉创作作品集">Song Ziming | Moving Image &amp; Visual Arts Portfolio</title>
+    <meta name="description" content="Song Ziming's portfolio of live-action films, generative imagery, stage visuals and experiments across media." data-i18n-attrs="{&quot;content&quot;:&quot;宋梓铭的个人作品集，呈现实拍影像、生成式影像、舞台视觉与多媒介视觉创作。&quot;}">
+    <link rel="preload" href="assets/fonts/general-sans-500.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="font-faces.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="aigc.css">
+    <link rel="stylesheet" href="cases.css">
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="language.css">
+    <link rel="stylesheet" href="concert-process.css">
+    <link rel="stylesheet" href="qingyun-process.css">
+    <link rel="stylesheet" href="yexing-process.css">
+    <link rel="stylesheet" href="typography.css">
+    <link rel="stylesheet" href="backgrounds.css">
+    <link rel="stylesheet" href="home-entrance.css">
   </head>
   <body>
-    <header class="site-header" data-header>
-      <a class="brand" href="#home" aria-label="返回首页">
+    <header class="site-header" data-header="">
+      <a class="brand" href="#home" aria-label="Back to Home" data-i18n-attrs="{&quot;aria-label&quot;:&quot;返回首页&quot;}">
         <span class="brand-mark">SZM</span>
-        <span>宋梓铭</span>
+        <span data-i18n="宋梓铭">Song Ziming</span>
       </a>
-      <button class="menu-toggle" type="button" aria-label="打开导航" aria-expanded="false" data-menu-toggle>
+      <button class="menu-toggle" type="button" aria-label="Open Navigation" aria-expanded="false" data-menu-toggle="" data-i18n-attrs="{&quot;aria-label&quot;:&quot;打开导航&quot;}">
         <span></span>
         <span></span>
       </button>
-      <nav class="site-nav" data-nav>
-        <a href="#works">作品</a>
-        <a href="#about">关于</a>
-        <a href="#services">服务</a>
-        <a href="#workflow">流程</a>
-        <a href="#resume">简历</a>
-        <a href="#contact">联系</a>
+      <nav class="site-nav" data-nav="">
+        <a href="#works" data-i18n="作品">Work</a>
+        <a href="#about" data-i18n="关于">About</a>
+        <a href="#resume" data-i18n="经历">Experience</a>
+        <a href="#contact" data-i18n="联系">Contact</a>
       </nav>
+      <div class="language-switch" role="group" aria-label="Language">
+        <button type="button" data-language="en" aria-pressed="true" lang="en" title="English">EN</button>
+        <button type="button" data-language="zh" aria-pressed="false" lang="zh-CN" title="中文">中文</button>
+      </div>
     </header>
 
     <main>
-      <section class="hero" id="home" aria-label="首页">
-        <img class="hero-media" decoding="async" fetchpriority="high" src="assets/hero-web.webp" alt="AI 影视创作视觉实验室" />
+      <section class="hero home-cover" id="home" aria-label="Home" data-i18n-attrs="{&quot;aria-label&quot;:&quot;首页&quot;}">
+        <img class="hero-media" decoding="async" fetchpriority="high" src="assets/hero-web.webp" alt="Generative moving-image visual study" data-i18n-attrs="{&quot;alt&quot;:&quot;AI 影视创作视觉实验室&quot;}">
         <div class="hero-shade"></div>
         <canvas class="hero-prism" aria-hidden="true"></canvas>
-        <p class="hero-greeting">👋Hi, I'm an AIGC creator.</p>
         <div class="hero-content">
-          <p class="eyebrow">AI FILMMAKER / NEW VISUAL LANGUAGE</p>
-          <h1>SONG ZIMING</h1>
-          <p class="hero-role">AIGC VIDEO / COMMERCIAL FILM / STAGE VISUAL</p>
-          <p class="hero-copy">用 AI 与影像语言，创作具有电影感的未来叙事。</p>
-        </div>
-        <div class="hero-meta" aria-label="核心能力">
-          <span>AIGC VIDEO</span>
-          <span>POST-PRODUCTION</span>
-          <span>COMMERCIAL FILM</span>
-          <span>STAGE VISUAL</span>
-        </div>
-        <div class="hero-corner-actions" aria-label="首页快捷入口">
-          <a class="button button-light" href="#works">访问网站</a>
-          <a class="button button-ghost" href="宋梓铭简历.pdf">下载简历</a>
-        </div>
-      </section>
-
-      <section class="section intro-strip profile-panel" aria-label="定位">
-        <div class="profile-label">
-          <div class="section-kicker">PROFILE</div>
-          <span>AI CINEMA / VISUAL DESIGN</span>
-        </div>
-        <div class="profile-main">
-          <h2>Creating cinematic images with AI, editing, and visual direction.</h2>
-          <p>
-            我将 AIGC 工作流与影视后期经验结合，用更高效的方式完成风格探索、画面生成、剪辑合成与视觉包装。
-            作品关注电影感、情绪表达和商业可交付性，适用于 AI 短剧、广告片、品牌影像与舞台视觉。
-          </p>
-          <div class="profile-points" aria-label="核心创作方向">
-            <span>AIGC Storytelling</span>
-            <span>Post-production</span>
-            <span>Commercial Visuals</span>
+          <p class="eyebrow" data-i18n="宋梓铭 / SELECTED PORTFOLIO">SONG ZIMING / SELECTED PORTFOLIO</p>
+          <h1 aria-label="SONG ZIMING"><span class="home-name-word" aria-hidden="true"><span>S</span><span>O</span><span>N</span><span>G</span></span> <span class="home-name-word" aria-hidden="true"><span>Z</span><span>I</span><span>M</span><span>I</span><span>N</span><span>G</span></span></h1>
+          <p class="hero-role">Moving Image · Generative Media · Spatial Storytelling</p>
+          <p class="hero-copy"><span class="i18n-copy" data-i18n="以实拍、生成式影像与舞台视觉，">Exploring narrative and the viewing experience </span><br class="home-mobile-break"><span class="i18n-copy" data-i18n="探索叙事与观看体验。">through film, generative imagery and stage visuals.</span></p>
+          <div class="hero-actions">
+            <a class="button button-light" href="#works"><span class="i18n-copy" data-i18n="查看精选作品">View Selected Work</span><span aria-hidden="true">↗</span></a>
+            <a class="home-cv-link" href="宋梓铭简历.pdf"><span class="i18n-copy" data-i18n="下载简历">View CV (Chinese)</span><span aria-hidden="true">↗</span></a>
           </div>
         </div>
+        <a class="home-scroll" href="#works" aria-label="Go to Selected Work" data-i18n-attrs="{&quot;aria-label&quot;:&quot;前往精选作品&quot;}"><span aria-hidden="true">↓</span></a>
       </section>
+
 
       <section class="section" id="works">
         <div class="section-heading">
           <div>
             <p class="eyebrow">SELECTED WORKS</p>
-            <h2>精选作品</h2>
+            <h2 data-i18n="精选作品">Selected Work</h2>
           </div>
-          <p>
-            以影视广告为主线，延展到 AIGC 影像、舞台视觉与综合视觉创作，呈现从影像叙事到多媒介实验的完整创作能力。
-          </p>
+          <p data-i18n="以影视广告为主线，延展到 AIGC 影像、舞台视觉与综合视觉创作，呈现从影像叙事到多媒介实验的完整创作能力。">A selection of commercials, generative films, stage visuals and visual studies, spanning moving-image storytelling and experiments across media.</p>
         </div>
 
-        <div class="cinematic-showcase" data-cinematic-showcase tabindex="0" aria-label="精选作品滚动轮播" aria-roledescription="carousel">
-          <article class="cinematic-slide is-active" data-cinematic-slide aria-hidden="false">
-            <a href="#category-details" data-category-link="commercial" aria-label="查看影视广告作品">
-              <img loading="lazy" decoding="async" src="assets/qingyun-main-web.webp" alt="青筠时隐森林人物广告主视觉" />
+        <div class="cinematic-showcase" data-cinematic-showcase="" tabindex="0" aria-label="Selected work carousel" aria-roledescription="carousel" data-i18n-attrs="{&quot;aria-label&quot;:&quot;精选作品滚动轮播&quot;}">
+          <article class="cinematic-slide is-active" data-cinematic-slide="" aria-hidden="false">
+            <a href="#category-details" data-category-link="commercial" aria-label="View Commercial Films" data-i18n-attrs="{&quot;aria-label&quot;:&quot;查看影视广告作品&quot;}">
+              <img loading="lazy" decoding="async" src="assets/qingyun-main-web.webp" alt="Qingyun Shiyin: figure in a forest" data-i18n-attrs="{&quot;alt&quot;:&quot;青筠时隐森林人物广告主视觉&quot;}">
               <div class="cinematic-shade" aria-hidden="true"></div>
               <div class="cinematic-meta cinematic-meta-top-left">
                 <span>01 / COMMERCIAL FILM</span>
-                <small>实拍影视广告</small>
+                <small data-i18n="实拍影视广告">Live-action commercial</small>
               </div>
               <div class="cinematic-meta cinematic-meta-top-right">
                 <span>2025</span>
-                <small>HBN 品牌命题</small>
+                <small data-i18n="HBN 品牌命题">HBN brand brief</small>
               </div>
               <div class="cinematic-meta cinematic-meta-bottom-left">
                 <span>SELECTED WORK</span>
-                <h3>青筠时隐</h3>
+                <h3 data-i18n="青筠时隐">Qingyun Shiyin</h3>
               </div>
               <div class="cinematic-meta cinematic-meta-bottom-right">
                 <span>DIRECTING / EDITING / POST</span>
-                <p>以东方护肤语境、自然光影与产品叙事完成品牌表达。</p>
+                <p data-i18n="以东方护肤语境、自然光影与产品叙事完成品牌表达。">A skincare brand story told through natural light, landscape and product imagery.</p>
               </div>
             </a>
           </article>
 
-          <article class="cinematic-slide" data-cinematic-slide aria-hidden="true">
-            <a href="#category-details" data-category-link="aigc" aria-label="查看夜行骇客 AI 漫剧作品">
-              <img loading="lazy" decoding="async" src="assets/yexing-title-frame.jpg" alt="夜行骇客中英文片名画面" />
+          <article class="cinematic-slide" data-cinematic-slide="" aria-hidden="true">
+            <a href="#category-details" data-category-link="aigc" aria-label="View Night Hacker and AI Dramas" data-i18n-attrs="{&quot;aria-label&quot;:&quot;查看夜行骇客 AI 漫剧作品&quot;}">
+              <img loading="lazy" decoding="async" src="assets/yexing-title-frame.jpg" alt="Night Hacker: title frame" data-i18n-attrs="{&quot;alt&quot;:&quot;夜行骇客中英文片名画面&quot;}">
               <div class="cinematic-shade" aria-hidden="true"></div>
               <div class="cinematic-meta cinematic-meta-top-left">
                 <span>02 / AI SHORT DRAMA</span>
-                <small>AI 漫剧</small>
+                <small data-i18n="AI 漫剧">AI animated drama</small>
               </div>
               <div class="cinematic-meta cinematic-meta-top-right">
                 <span>2026</span>
-                <small>AIGC 全流程制作</small>
+                <small data-i18n="AIGC 全流程制作">End-to-end AIGC production</small>
               </div>
               <div class="cinematic-meta cinematic-meta-bottom-left">
                 <span>SELECTED WORK</span>
-                <h3>夜行骇客</h3>
+                <h3 data-i18n="夜行骇客">Night Hacker</h3>
               </div>
               <div class="cinematic-meta cinematic-meta-bottom-right">
                 <span>EXECUTION / GENERATION / EDITING</span>
-                <p>以赛博城市空间、故障质感与快速镜头完成悬疑氛围表达。</p>
+                <p data-i18n="以赛博城市空间、故障质感与快速镜头完成悬疑氛围表达。">Cyberpunk cityscapes, glitch textures and rapid cuts create an atmosphere of suspense.</p>
               </div>
             </a>
           </article>
 
-          <article class="cinematic-slide" data-cinematic-slide aria-hidden="true">
-            <a href="#category-details" data-category-link="stage" aria-label="查看舞台投影设计作品">
-              <img loading="lazy" decoding="async" src="assets/concert-poster-web.webp" alt="风华声脉音乐会宽幅海报" />
+          <article class="cinematic-slide" data-cinematic-slide="" aria-hidden="true">
+            <a href="#category-details" data-category-link="stage" aria-label="View Stage Visuals" data-i18n-attrs="{&quot;aria-label&quot;:&quot;查看舞台投影设计作品&quot;}">
+              <img loading="lazy" decoding="async" src="assets/concert-poster-web.webp" alt="Elegant Rhythms of Legacy: concert poster" data-i18n-attrs="{&quot;alt&quot;:&quot;风华声脉音乐会宽幅海报&quot;}">
               <div class="cinematic-shade" aria-hidden="true"></div>
               <div class="cinematic-meta cinematic-meta-top-left">
                 <span>03 / STAGE PROJECTION</span>
-                <small>舞台视觉设计</small>
+                <small data-i18n="舞台视觉设计">Stage visual design</small>
               </div>
               <div class="cinematic-meta cinematic-meta-top-right">
                 <span>2026</span>
-                <small>杭州金沙湖大剧院</small>
+                <small data-i18n="杭州金沙湖大剧院">Jinshahu Grand Theatre, Hangzhou</small>
               </div>
               <div class="cinematic-meta cinematic-meta-bottom-left">
                 <span>SELECTED WORK</span>
-                <h3>风华声脉</h3>
+                <h3 data-i18n="风华声脉">Elegant Rhythms of Legacy</h3>
               </div>
               <div class="cinematic-meta cinematic-meta-bottom-right">
                 <span>DIRECTOR / VISUAL LEAD</span>
-                <p>统筹双纱幕投影、曲目主题视觉与现场演出影像。</p>
+                <p data-i18n="统筹双纱幕投影、曲目主题视觉与现场演出影像。">A visual direction project combining dual-scrim projections, music-led imagery and live performance.</p>
               </div>
             </a>
           </article>
 
-          <article class="cinematic-slide cinematic-slide-focus-right" data-cinematic-slide aria-hidden="true">
-            <a href="#category-details" data-category-link="photography" aria-label="查看摄影作品">
-              <img loading="lazy" decoding="async" src="assets/overview-photo-river-web.webp" alt="河流落日风光摄影作品" />
+          <article class="cinematic-slide cinematic-slide-focus-right" data-cinematic-slide="" aria-hidden="true">
+            <a href="#category-details" data-category-link="photography" aria-label="View Photography" data-i18n-attrs="{&quot;aria-label&quot;:&quot;查看摄影作品&quot;}">
+              <img loading="lazy" decoding="async" src="assets/overview-photo-river-web.webp" alt="River at sunset" data-i18n-attrs="{&quot;alt&quot;:&quot;河流落日风光摄影作品&quot;}">
               <div class="cinematic-shade" aria-hidden="true"></div>
               <div class="cinematic-meta cinematic-meta-top-left">
                 <span>04 / PHOTOGRAPHY</span>
-                <small>风光与空间摄影</small>
+                <small data-i18n="风光与空间摄影">Landscape &amp; Space</small>
               </div>
               <div class="cinematic-meta cinematic-meta-top-right">
                 <span>2023-2025</span>
@@ -171,22 +157,22 @@
               </div>
               <div class="cinematic-meta cinematic-meta-bottom-left">
                 <span>VISUAL STUDIES</span>
-                <h3>摄影作品</h3>
+                <h3 data-i18n="摄影作品">Photography</h3>
               </div>
               <div class="cinematic-meta cinematic-meta-bottom-right">
                 <span>LANDSCAPE / SPACE / LIGHT</span>
-                <p>记录自然光线、城市空间与旅途中的瞬间秩序。</p>
+                <p data-i18n="记录自然光线、城市空间与旅途中的瞬间秩序。">Observations of natural light, urban space and fleeting compositions encountered while travelling.</p>
               </div>
             </a>
           </article>
 
-          <article class="cinematic-slide" data-cinematic-slide aria-hidden="true">
-            <a href="#category-details" data-category-link="other" aria-label="查看综合视觉创作">
-              <img loading="lazy" decoding="async" src="assets/overview-ar-city-web.webp" alt="综合视觉创作中的城市视觉合成作品" />
+          <article class="cinematic-slide" data-cinematic-slide="" aria-hidden="true">
+            <a href="#category-details" data-category-link="other" aria-label="View Visual Studies" data-i18n-attrs="{&quot;aria-label&quot;:&quot;查看综合视觉创作&quot;}">
+              <img loading="lazy" decoding="async" src="assets/overview-ar-city-web.webp" alt="City compositing study" data-i18n-attrs="{&quot;alt&quot;:&quot;综合视觉创作中的城市视觉合成作品&quot;}">
               <div class="cinematic-shade" aria-hidden="true"></div>
               <div class="cinematic-meta cinematic-meta-top-left">
                 <span>05 / OTHER WORKS</span>
-                <small>多媒介视觉实验</small>
+                <small data-i18n="多媒介视觉实验">Experiments across media</small>
               </div>
               <div class="cinematic-meta cinematic-meta-top-right">
                 <span>2023-2025</span>
@@ -194,560 +180,863 @@
               </div>
               <div class="cinematic-meta cinematic-meta-bottom-left">
                 <span>VISUAL EXPLORATION</span>
-                <h3>综合视觉创作</h3>
+                <h3 data-i18n="综合视觉创作">Visual Studies</h3>
               </div>
               <div class="cinematic-meta cinematic-meta-bottom-right">
                 <span>GRAPHIC / 3D / UE / PHOTO</span>
-                <p>平面设计、三维建模、UE 场景、视觉合成与摄影实践。</p>
+                <p data-i18n="平面设计、三维建模、UE 场景、视觉合成与摄影实践。">Studies in graphic design, 3D modelling, Unreal Engine environments, compositing and photography.</p>
               </div>
             </a>
           </article>
 
-          <div class="cinematic-controls" aria-label="轮播控制">
-            <span><b data-cinematic-current>01</b> / 05</span>
+          <div class="cinematic-controls" aria-label="Carousel Controls" data-i18n-attrs="{&quot;aria-label&quot;:&quot;轮播控制&quot;}">
+            <span><b data-cinematic-current="">01</b> / 05</span>
             <small>SCROLL / SWIPE</small>
             <div>
-              <button type="button" data-cinematic-prev aria-label="上一个作品">↑</button>
-              <button type="button" data-cinematic-next aria-label="下一个作品">↓</button>
+              <button type="button" data-cinematic-prev="" aria-label="Previous Work" data-i18n-attrs="{&quot;aria-label&quot;:&quot;上一个作品&quot;}">↑</button>
+              <button type="button" data-cinematic-next="" aria-label="Next Work" data-i18n-attrs="{&quot;aria-label&quot;:&quot;下一个作品&quot;}">↓</button>
             </div>
           </div>
         </div>
 
-        <div class="overview-categories" aria-label="作品能力综述">
+        <div class="overview-categories" aria-label="Work Categories" data-i18n-attrs="{&quot;aria-label&quot;:&quot;作品能力综述&quot;}">
           <a href="#category-details" data-category-link="commercial">
-            <img loading="lazy" decoding="async" src="assets/qingyun-main-web.webp" alt="影视广告作品静帧" />
+            <img loading="lazy" decoding="async" src="assets/qingyun-main-web.webp" alt="Commercial film still" data-i18n-attrs="{&quot;alt&quot;:&quot;影视广告作品静帧&quot;}">
             <span>01</span>
-            <strong>影视广告</strong>
-            <em>Commercial Film</em>
+            <strong data-i18n="影视广告">Commercial Film</strong>
+
             <i>View Works</i>
           </a>
           <a href="#category-details" data-category-link="aigc">
-            <img loading="lazy" decoding="async" src="assets/overview-aigc-ink-web.webp" alt="AIGC 水墨场景概念图" />
+            <img loading="lazy" decoding="async" src="assets/overview-aigc-ink-web.webp" alt="AI-generated ink landscape concept" data-i18n-attrs="{&quot;alt&quot;:&quot;AIGC 水墨场景概念图&quot;}">
             <span>02</span>
-            <strong>AIGC 影像</strong>
-            <em>AI Video</em>
+            <strong data-i18n="AIGC 影像">Generative Film</strong>
+
             <i>View Works</i>
           </a>
           <a href="#category-details" data-category-link="stage">
-            <img loading="lazy" decoding="async" src="assets/concert-poster-web.webp" alt="风华声脉舞台投影设计海报" />
+            <img loading="lazy" decoding="async" src="assets/concert-poster-web.webp" alt="Elegant Rhythms of Legacy: stage projection poster" data-i18n-attrs="{&quot;alt&quot;:&quot;风华声脉舞台投影设计海报&quot;}">
             <span>03</span>
-            <strong>舞台投影设计</strong>
-            <em>Stage Projection</em>
+            <strong data-i18n="舞台投影设计">Stage Visuals</strong>
+
             <i>View Works</i>
           </a>
           <a href="#category-details" data-category-link="photography">
-            <img loading="lazy" decoding="async" src="assets/overview-photo-river-web.webp" alt="摄影作品风光静帧" />
+            <img loading="lazy" decoding="async" src="assets/overview-photo-river-web.webp" alt="Landscape photograph" data-i18n-attrs="{&quot;alt&quot;:&quot;摄影作品风光静帧&quot;}">
             <span>04</span>
-            <strong>摄影作品</strong>
-            <em>Photography</em>
+            <strong data-i18n="摄影作品">Photography</strong>
+
             <i>View Works</i>
           </a>
           <a href="#category-details" data-category-link="other">
-            <img loading="lazy" decoding="async" src="assets/overview-ar-city-web.webp" alt="综合视觉创作代表作品" />
+            <img loading="lazy" decoding="async" src="assets/overview-ar-city-web.webp" alt="Selected visual study" data-i18n-attrs="{&quot;alt&quot;:&quot;综合视觉创作代表作品&quot;}">
             <span>05</span>
-            <strong>综合视觉创作</strong>
-            <em>Other Works</em>
+            <strong data-i18n="综合视觉创作">Visual Studies</strong>
+
             <i>View Works</i>
           </a>
         </div>
       </section>
 
-      <section class="section project-section category-details" id="category-details" aria-label="分类作品详情" hidden>
+      <section class="section project-section category-details" id="category-details" aria-label="Work by Category" data-i18n-attrs="{&quot;aria-label&quot;:&quot;分类作品详情&quot;}" hidden>
         <div class="category-detail-header">
-          <button type="button" data-category-close aria-label="返回精选作品">← 返回精选作品</button>
+          <button type="button" data-category-close="" aria-label="Back to Selected Work" data-i18n="← 返回精选作品" data-i18n-attrs="{&quot;aria-label&quot;:&quot;返回精选作品&quot;}">← Back to Selected Work</button>
           <div>
-            <p class="eyebrow" data-category-kicker>COMMERCIAL FILM</p>
-            <h2 data-category-title>影视广告</h2>
-            <p data-category-description>品牌命题、实拍制作与后期成片。</p>
+            <p class="eyebrow" data-category-kicker="">COMMERCIAL FILM</p>
+            <h2 data-category-title="" data-i18n="影视广告">Commercial Film</h2>
+            <p data-category-description="" data-i18n="品牌命题、实拍制作与后期成片。">Brand briefs, live-action production and post-production.</p>
           </div>
         </div>
 
-        <div class="subcategory-tabs" data-aigc-tabs hidden aria-label="AIGC 影像分类">
-          <button type="button" class="is-active" data-aigc-filter="short">AI 短剧 <span>AI SHORT DRAMA</span></button>
-          <button type="button" data-aigc-filter="ad">AI 广告 <span>AI COMMERCIAL</span></button>
-        </div>
-
-        <article class="project-detail" id="project-qingyun" data-category-item="commercial">
+<article class="case-layout project-detail" id="project-qingyun" data-category-item="commercial">
+          <div class="project-body case-heading">
+            <div class="case-title">
+              <p class="eyebrow">01 / COMMERCIAL FILM · 2025</p>
+              <h2 data-i18n="青筠时隐">Qingyun Shiyin</h2>
+              <p class="case-subtitle" data-i18n="影视广告 / 品牌叙事">Commercial film / Brand storytelling</p>
+            </div>
+            <div class="case-intro">
+              <p data-i18n="以东方智慧与护肤品牌叙事为核心，通过实拍影像完成广告创意、视觉风格、镜头节奏与成片表达。">A live-action skincare commercial drawing on Eastern cultural references. Concept, visual style and shot rhythm come together in a cohesive brand narrative.</p>
+              <button class="case-watch" type="button" data-video-src="assets/qingyun-web.webm" data-video-poster="assets/qingyun-main-web.webp" data-video-title="Qingyun Shiyin · Commercial Film" data-i18n-attrs="{&quot;data-video-title&quot;:&quot;《青筠时隐》影视广告&quot;}"><span class="i18n-copy" data-i18n="观看完整成片">Watch Full Film</span><span aria-hidden="true">↘</span></button>
+            </div>
+            <dl class="project-meta">
+              <div><dt data-i18n="本人职责">My Role</dt><dd data-i18n="导演 / 制片">Director / Producer</dd></div>
+              <div><dt data-i18n="项目">Project</dt><dd data-i18n="HBN 品牌命题">HBN brand brief</dd></div>
+              <div><dt data-i18n="形式">Format</dt><dd data-i18n="实拍影视广告">Live-action commercial</dd></div>
+              <div><dt data-i18n="成果">Recognition</dt><dd data-i18n="浙江省一等奖 / 全国二等奖">First Prize, Zhejiang / Second Prize, National</dd></div>
+            </dl>
+          </div>
           <div class="project-qingyun-media">
             <div class="project-cover project-video-player">
-              <button class="video-launch" type="button" data-video-src="assets/qingyun-web.webm" data-video-poster="assets/qingyun-main-web.webp" data-video-title="《青筠时隐》影视广告" aria-label="播放青筠时隐影视广告">
-                <img loading="lazy" decoding="async" src="assets/qingyun-main-web.webp" alt="青筠时隐影视广告主视觉" />
-                <span>播放完整视频</span>
+              <button class="video-launch" type="button" data-video-src="assets/qingyun-web.webm" data-video-poster="assets/qingyun-main-web.webp" data-video-title="Qingyun Shiyin · Commercial Film" aria-label="Play Qingyun Shiyin" data-i18n-attrs="{&quot;aria-label&quot;:&quot;播放青筠时隐影视广告&quot;,&quot;data-video-title&quot;:&quot;《青筠时隐》影视广告&quot;}">
+                <img loading="lazy" decoding="async" src="assets/qingyun-main-web.webp" alt="Qingyun Shiyin: main visual" data-i18n-attrs="{&quot;alt&quot;:&quot;青筠时隐影视广告主视觉&quot;}">
+                <span data-i18n="播放完整视频">Play Full Film</span>
               </button>
             </div>
-            <div class="project-stills" aria-label="青筠时隐静帧组合">
-              <img loading="lazy" decoding="async" src="assets/qingyun-forest-web.webp" alt="青筠时隐森林人物静帧" />
-              <img loading="lazy" decoding="async" src="assets/qingyun-hand-web.webp" alt="青筠时隐手部水滴静帧" />
-              <img loading="lazy" decoding="async" src="assets/qingyun-underwater-web.webp" alt="青筠时隐水下场景静帧" />
-              <img loading="lazy" decoding="async" src="assets/qingyun-nature-web.webp" alt="青筠时隐自然旋转镜头静帧" />
+            <div class="project-stills" aria-label="Qingyun Shiyin: film stills" data-i18n-attrs="{&quot;aria-label&quot;:&quot;青筠时隐静帧组合&quot;}">
+              <img loading="lazy" decoding="async" src="assets/qingyun-forest-web.webp" alt="Qingyun Shiyin: forest scene" data-i18n-attrs="{&quot;alt&quot;:&quot;青筠时隐森林人物静帧&quot;}">
+              <img loading="lazy" decoding="async" src="assets/qingyun-hand-web.webp" alt="Qingyun Shiyin: hand and water detail" data-i18n-attrs="{&quot;alt&quot;:&quot;青筠时隐手部水滴静帧&quot;}">
+              <img loading="lazy" decoding="async" src="assets/qingyun-underwater-web.webp" alt="Qingyun Shiyin: underwater scene" data-i18n-attrs="{&quot;alt&quot;:&quot;青筠时隐水下场景静帧&quot;}">
+              <img loading="lazy" decoding="async" src="assets/qingyun-nature-web.webp" alt="Qingyun Shiyin: rotating nature shot" data-i18n-attrs="{&quot;alt&quot;:&quot;青筠时隐自然旋转镜头静帧&quot;}">
             </div>
           </div>
-          <div class="project-body">
-            <p class="eyebrow">COMMERCIAL FILM</p>
-            <h2>《青筠时隐》影视广告</h2>
-            <p>
-              以东方智慧与护肤品牌叙事为核心，通过实拍影像完成广告创意、视觉风格、镜头节奏与成片表达。
-            </p>
-            <dl class="project-meta">
-              <div><dt>成果</dt><dd>浙江省一等奖 / 全国二等奖</dd></div>
-              <div><dt>方向</dt><dd>影视广告 / 品牌叙事</dd></div>
-              <div><dt>状态</dt><dd>完整成片可播放</dd></div>
-            </dl>
-          </div>
+          <section class="qingyun-process" id="qingyun-process" aria-labelledby="qingyun-process-title">
+            <header class="qingyun-process-heading">
+              <p class="qingyun-process-kicker" data-i18n="创作过程">Creative Process</p>
+              <h3 id="qingyun-process-title" data-i18n="从修复的细节，到自然的感知">From the details of restoration to an experience of nature</h3>
+            </header>
+            <section class="qingyun-process-block">
+              <header class="qingyun-process-heading">
+                <p class="qingyun-process-kicker" data-i18n="01 / 创意起点">01 / CONCEPT</p>
+                <h4 data-i18n="以陶瓷修复，建立叙事的隐喻">Ceramic restoration as a narrative metaphor</h4>
+                <p data-i18n="我将品牌的修护主题转化为陶瓷修复的视觉隐喻。主人公从专注的手工修复出发，进入竹林、溪流与植物构成的自然场景，以触觉、水和光线连接人物感知与“新生”的意象。">I translated the brand's theme of repair into a visual metaphor of ceramic restoration. The protagonist moves from close attention to a handmade object into bamboo groves, streams and plant life. Touch, water and light connect her sensory experience with the idea of renewal.</p>
+              </header>
+              <div class="qingyun-process-grid">
+                <figure>
+                  <button class="qingyun-process-image" type="button" data-lightbox="assets/qingyun-process-restoration-frame.webp" aria-label="Enlarge Ceramic Restoration Detail" data-i18n-attrs="{&quot;aria-label&quot;:&quot;放大查看陶瓷修复细节&quot;}">
+                    <img loading="lazy" decoding="async" src="assets/qingyun-process-restoration-frame.webp" width="1920" height="1080" alt="Close-up of the protagonist's hands working on a ceramic bowl" data-i18n-attrs="{&quot;alt&quot;:&quot;主人公手工修复陶瓷碗的细节画面&quot;}">
+                  </button>
+                  <figcaption data-i18n="修瓷动作：以手部与器物细节建立“修复”的视觉线索。">Restoration: hands and ceramic details establish the visual motif of repair.</figcaption>
+                </figure>
+                <figure>
+                  <button class="qingyun-process-image" type="button" data-lightbox="assets/qingyun-process-growth.webp" aria-label="Enlarge New Growth Detail" data-i18n-attrs="{&quot;aria-label&quot;:&quot;放大查看植物新生意象&quot;}">
+                    <img loading="lazy" decoding="async" src="assets/qingyun-process-growth.webp" width="1800" height="1032" alt="Small plants growing among moss, with the film's original Chinese caption" data-i18n-attrs="{&quot;alt&quot;:&quot;苔藓间生长的植物与影片原始中文字幕&quot;}">
+                  </button>
+                  <figcaption data-i18n="新生意象：苔藓与植物延续从修复到生长的叙事线索。">Renewal: moss and plant life extend the narrative from repair to growth.</figcaption>
+                </figure>
+              </div>
+            </section>
+            <section class="qingyun-process-block">
+              <header class="qingyun-process-heading">
+                <p class="qingyun-process-kicker" data-i18n="02 / 镜头设计">02 / SHOT DESIGN</p>
+                <h4 data-i18n="从器物特写，打开自然空间">From intimate details to an open natural setting</h4>
+                <p data-i18n="分镜以景别、机位与运镜组织叙事：修瓷段落用密集的手部与器物特写建立专注感，自然段落则通过人物、树木与水流的切换打开空间。旁白与声音线索连接这两种观看尺度。">The shot list organises the narrative through framing, camera position and movement. Close-ups of hands and ceramic details establish concentration in the restoration sequence; cuts between the protagonist, trees and running water open up the natural setting. Voiceover and sound connect these two scales of attention.</p>
+              </header>
+              <div class="qingyun-process-grid qingyun-storyboard-grid">
+                <figure>
+                  <button class="qingyun-process-image" type="button" data-lightbox="assets/qingyun-process-storyboard-restoration.webp" aria-label="Enlarge Restoration Storyboard" data-i18n-attrs="{&quot;aria-label&quot;:&quot;放大查看修复段落分镜&quot;}">
+                    <img loading="lazy" decoding="async" src="assets/qingyun-process-storyboard-restoration.webp" width="1029" height="583" alt="Original Chinese storyboard for shots 7 to 12, covering ceramic restoration details" data-i18n-attrs="{&quot;alt&quot;:&quot;原始中文分镜第7至12镜：陶瓷修复细节&quot;}">
+                  </button>
+                  <figcaption data-i18n="第 7–12 镜 / 修瓷、黏合剂与器物细节。原始分镜（中文）。">Shots 7–12 / Restoration, adhesive and ceramic details. Original storyboard in Chinese.</figcaption>
+                </figure>
+                <figure>
+                  <button class="qingyun-process-image" type="button" data-lightbox="assets/qingyun-process-storyboard-nature.webp" aria-label="Enlarge Nature Storyboard" data-i18n-attrs="{&quot;aria-label&quot;:&quot;放大查看自然段落分镜&quot;}">
+                    <img loading="lazy" decoding="async" src="assets/qingyun-process-storyboard-nature.webp" width="1029" height="606" alt="Original Chinese storyboard for shots 13 to 18, connecting the protagonist, trees, plants and a waterfall" data-i18n-attrs="{&quot;alt&quot;:&quot;原始中文分镜第13至18镜：人物、树木、植物与瀑布&quot;}">
+                  </button>
+                  <figcaption data-i18n="第 13–18 镜 / 人物感知、竹林与水流的衔接。原始分镜（中文）。">Shots 13–18 / A transition through the protagonist, bamboo grove and water. Original storyboard in Chinese.</figcaption>
+                </figure>
+              </div>
+            </section>
+            <section class="qingyun-process-block">
+              <header class="qingyun-process-heading">
+                <p class="qingyun-process-kicker" data-i18n="03 / 拍摄执行">03 / PRODUCTION</p>
+                <h4 data-i18n="现场拍摄记录">On-set Photography</h4>
+                <p data-i18n="外景方案围绕云栖竹径、九溪等场地安排人物与自然细节。拍摄设计以自然光为基础，结合补光、反光板和浅景深，让肤感、树皮与水流保持细腻的层次。作为导演／制片，我把叙事需求落实到场景选择、镜头安排与拍摄协作中。">The location plan brought together the protagonist and details of nature at Yunqi Bamboo Trail, Jiuxi and nearby locations. The lighting approach combined available light with fill light, reflectors and shallow depth of field to preserve subtle textures. As director and producer, I translated narrative needs into location choices, shot planning and collaboration on set.</p>
+              </header>
+              <div class="qingyun-process-grid qingyun-production-grid">
+                <figure>
+                  <button class="qingyun-process-image" type="button" data-lightbox="assets/qingyun-process-location.webp" aria-label="Enlarge Location Shoot" data-i18n-attrs="{&quot;aria-label&quot;:&quot;放大查看外景拍摄记录&quot;}">
+                    <img loading="lazy" decoding="async" src="assets/qingyun-process-location.webp" width="1800" height="1350" alt="The film crew setting up a shot beside a stream" data-i18n-attrs="{&quot;alt&quot;:&quot;剧组在溪流旁布置镜头的拍摄记录&quot;}">
+                  </button>
+                  <figcaption data-i18n="外景拍摄：在溪流环境中组织人物与镜头位置。">Location shoot: arranging the protagonist and camera within the stream setting.</figcaption>
+                </figure>
+                <figure>
+                  <button class="qingyun-process-image" type="button" data-lightbox="assets/qingyun-process-lighting.webp" aria-label="Enlarge Natural Light Setup" data-i18n-attrs="{&quot;aria-label&quot;:&quot;放大查看自然光拍摄记录&quot;}">
+                    <img loading="lazy" decoding="async" src="assets/qingyun-process-lighting.webp" width="1800" height="1350" alt="A reflector used beside the protagonist during an outdoor shoot" data-i18n-attrs="{&quot;alt&quot;:&quot;外景人物拍摄中使用反光板的现场记录&quot;}">
+                  </button>
+                  <figcaption data-i18n="人物拍摄：反光板与自然光的配合。">Portrait setup: a reflector complements the available light.</figcaption>
+                </figure>
+                <figure>
+                  <button class="qingyun-process-image" type="button" data-lightbox="assets/qingyun-process-voiceover.webp" aria-label="Enlarge Voiceover Recording" data-i18n-attrs="{&quot;aria-label&quot;:&quot;放大查看后期配音&quot;}">
+                    <img loading="lazy" decoding="async" src="assets/qingyun-process-voiceover.webp" width="1800" height="1350" alt="Voiceover recording session in a sound studio" data-i18n-attrs="{&quot;alt&quot;:&quot;录音棚里的后期配音现场&quot;}">
+                  </button>
+                  <figcaption data-i18n="后期配音">Voiceover Recording</figcaption>
+                </figure>
+              </div>
+            </section>
+          </section>
         </article>
 
-        <article class="project-detail reverse" id="project-milkpowder" data-category-item="commercial">
+<article class="case-layout project-detail reverse" id="project-milkpowder" data-category-item="commercial">
+          <div class="project-body case-heading">
+            <div class="case-title case-title-long">
+              <p class="eyebrow">02 / COMMERCIAL FILM</p>
+              <h2 data-i18n="奶粉“黑幕”">Milk Powder: Behind the Deal</h2>
+              <p class="case-subtitle" data-i18n="影视广告 / 反差叙事">Commercial film / Contrasting narratives</p>
+            </div>
+            <div class="case-intro">
+              <p data-i18n="以“黑帮交易 × 青春场景”的反差创意，具象化产品珍稀性，并结合微观动画与大学生日常场景完成产品信息表达。">A contrast between a gang-style deal and everyday student life highlights the product's rarity, with microscopic animation connecting the concept to its features.</p>
+              <button class="case-watch" type="button" data-video-src="assets/milk-powder-web.webm" data-video-poster="assets/milk-powder-poster-web.webp" data-video-title="Milk Powder: Behind the Deal · Commercial Film" data-i18n-attrs="{&quot;data-video-title&quot;:&quot;《奶粉“黑幕”》影视广告&quot;}"><span class="i18n-copy" data-i18n="观看完整成片">Watch Full Film</span><span aria-hidden="true">↘</span></button>
+            </div>
+            <dl class="project-meta">
+              <div><dt data-i18n="本人职责">My Role</dt><dd data-i18n="后期">Post-production</dd></div>
+              <div><dt data-i18n="方向">Focus</dt><dd data-i18n="影视广告 / 反差叙事">Commercial film / Contrasting narratives</dd></div>
+              <div><dt data-i18n="形式">Format</dt><dd data-i18n="实拍影视广告">Live-action commercial</dd></div>
+              <div><dt data-i18n="成果">Recognition</dt><dd data-i18n="中国大学生广告艺术节学院奖优秀奖">Excellence Award, Academy Awards of the Chinese College Student Advertising Art Festival</dd></div>
+            </dl>
+          </div>
           <div class="project-qingyun-media">
             <div class="project-cover project-video-player">
-              <button class="video-launch" type="button" data-video-src="assets/milk-powder-web.webm" data-video-poster="assets/milk-powder-poster-web.webp" data-video-title="《奶粉“黑幕”》影视广告" aria-label="播放奶粉黑幕影视广告">
-                <img loading="lazy" decoding="async" src="assets/milk-powder-poster-web.webp" alt="奶粉黑幕影视广告海报" />
-                <span>播放完整视频</span>
+              <button class="video-launch" type="button" data-video-src="assets/milk-powder-web.webm" data-video-poster="assets/milk-powder-poster-web.webp" data-video-title="Milk Powder: Behind the Deal · Commercial Film" aria-label="Play Milk Powder: Behind the Deal" data-i18n-attrs="{&quot;aria-label&quot;:&quot;播放奶粉黑幕影视广告&quot;,&quot;data-video-title&quot;:&quot;《奶粉“黑幕”》影视广告&quot;}">
+                <img loading="lazy" decoding="async" src="assets/milk-powder-poster-web.webp" alt="Milk Powder: Behind the Deal: poster" data-i18n-attrs="{&quot;alt&quot;:&quot;奶粉黑幕影视广告海报&quot;}">
+                <span data-i18n="播放完整视频">Play Full Film</span>
               </button>
             </div>
-            <div class="project-stills" aria-label="奶粉黑幕静帧组合">
-              <img loading="lazy" decoding="async" src="assets/milk-powder-monitor-web.webp" alt="奶粉黑幕显示器场景静帧" />
-              <img loading="lazy" decoding="async" src="assets/milk-powder-table-web.webp" alt="奶粉黑幕交易场景静帧" />
-              <img loading="lazy" decoding="async" src="assets/milk-powder-character-web.webp" alt="奶粉黑幕人物场景静帧" />
-              <img loading="lazy" decoding="async" src="assets/milk-powder-poster-web.webp" alt="奶粉黑幕竖版海报" />
+            <div class="project-stills" aria-label="Milk Powder: Behind the Deal: film stills" data-i18n-attrs="{&quot;aria-label&quot;:&quot;奶粉黑幕静帧组合&quot;}">
+              <img loading="lazy" decoding="async" src="assets/milk-powder-monitor-web.webp" alt="Milk Powder: Behind the Deal: monitor scene" data-i18n-attrs="{&quot;alt&quot;:&quot;奶粉黑幕显示器场景静帧&quot;}">
+              <img loading="lazy" decoding="async" src="assets/milk-powder-table-web.webp" alt="Milk Powder: Behind the Deal: deal scene" data-i18n-attrs="{&quot;alt&quot;:&quot;奶粉黑幕交易场景静帧&quot;}">
+              <img loading="lazy" decoding="async" src="assets/milk-powder-character-web.webp" alt="Milk Powder: Behind the Deal: character scene" data-i18n-attrs="{&quot;alt&quot;:&quot;奶粉黑幕人物场景静帧&quot;}">
+              <img loading="lazy" decoding="async" src="assets/milk-powder-poster-web.webp" alt="Milk Powder: Behind the Deal: portrait poster" data-i18n-attrs="{&quot;alt&quot;:&quot;奶粉黑幕竖版海报&quot;}">
             </div>
-          </div>
-          <div class="project-body">
-            <p class="eyebrow">COMMERCIAL FILM</p>
-            <h2>《奶粉“黑幕”》影视广告</h2>
-            <p>以“黑帮交易 × 青春场景”的反差创意，具象化产品珍稀性，并结合微观动画与大学生日常场景完成产品信息表达。</p>
-            <dl class="project-meta">
-              <div><dt>成果</dt><dd>中国大学生广告艺术节学院奖优秀奖</dd></div>
-              <div><dt>方向</dt><dd>影视广告 / 反差叙事</dd></div>
-              <div><dt>状态</dt><dd>完整成片可播放</dd></div>
-            </dl>
           </div>
         </article>
 
-        <article class="project-detail" id="project-jinnong" data-category-item="aigc" data-aigc-kind="ad" hidden>
-          <div class="project-cover project-video-player">
-            <button class="video-launch" type="button" data-video-src="assets/aigc-jinnong-web.webm" data-video-poster="assets/jinnong-web.webp" data-video-title="《金农梅花册》官方宣发视频" aria-label="播放金农梅花册官方宣发视频">
-              <img loading="lazy" decoding="async" src="assets/jinnong-web.webp" alt="金农梅花册项目视觉" />
-              <span>播放完整视频</span>
-            </button>
-          </div>
-          <div class="project-body">
-            <p class="eyebrow">AIGC VIDEO GENERATION</p>
-            <h2>《金农梅花册》官方宣发视频</h2>
-            <p>
-              负责杭州西泠印社《金农梅花册》宣发视频项目，使用 Midjourney、可灵、Runway 等 AIGC 工具进行创意构思、
-              单帧生成、动态化、剪辑与后期处理，打造兼具艺术感与效率的全 AI 视频流程。
-            </p>
+<article class="case-layout project-detail reverse" id="project-concert" data-category-item="stage" hidden="">
+          <div class="project-body case-heading">
+            <div class="case-title case-title-long">
+              <p class="eyebrow">03 / STAGE VISUAL · 2026</p>
+              <h2 data-i18n="风华声脉">Elegant Rhythms of Legacy</h2>
+              <p class="case-subtitle" data-i18n="杭州金沙湖大剧院 / 音乐会舞台视觉">Jinshahu Grand Theatre, Hangzhou / Concert visuals</p>
+            </div>
+            <div class="case-intro">
+              <p data-i18n="担任跨专业联合毕设项目导演与视觉主创，负责舞台视觉全案策划、曲目主题视觉定义、美术风格统一、 直角双纱幕投影体系设计，以及数字人报幕形象与文案制作。">Project director and lead visual creator for an interdisciplinary graduation production. Responsibilities included visual direction, music-led imagery, a unified art style, an angled dual-scrim projection system, and the design and script of a digital host.</p>
+              <button class="case-watch" type="button" data-video-src="assets/concert-web.webm" data-video-poster="assets/concert-preview-frame.jpg" data-video-title="Elegant Rhythms of Legacy · Preview" data-i18n-attrs="{&quot;data-video-title&quot;:&quot;《风华声脉》预览版&quot;}"><span class="i18n-copy" data-i18n="观看预览版">Watch Preview</span><span aria-hidden="true">↘</span></button>
+            </div>
             <dl class="project-meta">
-              <div><dt>成果</dt><dd>省特等奖 / 全国三等奖</dd></div>
-              <div><dt>职责</dt><dd>创意、分镜、提示词、动态生成、剪辑</dd></div>
-              <div><dt>工具</dt><dd>ChatGPT / MJ / SD / Runway / 可灵 / Topaz</dd></div>
+              <div><dt data-i18n="职责">Role</dt><dd data-i18n="项目导演 / 视觉主创">Project Director / Visual Lead</dd></div>
+              <div><dt data-i18n="视觉方向">Visual Direction</dt><dd data-i18n="瓷器、傩面、鱼灯等中式民俗符号">Porcelain, Nuo masks, fish lanterns and Chinese folk motifs</dd></div>
+              <div><dt data-i18n="交付">Outcome</dt><dd data-i18n="沉浸式视听舞台完整落地">Fully realised immersive audiovisual stage production</dd></div>
             </dl>
           </div>
-        </article>
-
-        <article class="project-detail reverse" id="project-concert" data-category-item="stage" hidden>
-          <div class="project-qingyun-media concert-media" data-concert-switcher>
-            <div class="concert-version-tabs" aria-label="风华声脉视频版本">
-              <button type="button" class="is-active" data-concert-option data-concert-video="assets/concert-web.webm" data-concert-poster="assets/concert-preview-frame.jpg" data-concert-title="《风华声脉》预览版" aria-pressed="true">
-                <span>01</span>预览版
-              </button>
-              <button type="button" data-concert-option data-concert-video="assets/concert-full-web.webm" data-concert-poster="assets/concert-live-frame.jpg" data-concert-title="《风华声脉》现场完整版" aria-pressed="false">
-                <span>02</span>现场完整版
-              </button>
+          <div class="project-qingyun-media concert-media" data-concert-switcher="">
+            <div class="concert-version-tabs" aria-label="Elegant Rhythms of Legacy: Video Versions" data-i18n-attrs="{&quot;aria-label&quot;:&quot;风华声脉视频版本&quot;}">
+              <button type="button" class="is-active" data-concert-option="" data-concert-video="assets/concert-web.webm" data-concert-poster="assets/concert-preview-frame.jpg" data-concert-title="Elegant Rhythms of Legacy · Preview" aria-pressed="true" data-i18n-attrs="{&quot;data-concert-title&quot;:&quot;《风华声脉》预览版&quot;}">
+                <span>01</span><span class="i18n-copy" data-i18n="预览版">Preview</span></button>
+              <button type="button" data-concert-option="" data-concert-video="assets/concert-full-web.webm" data-concert-poster="assets/concert-live-frame.jpg" data-concert-title="Elegant Rhythms of Legacy · Full Live Performance" aria-pressed="false" data-i18n-attrs="{&quot;data-concert-title&quot;:&quot;《风华声脉》现场完整版&quot;}">
+                <span>02</span><span class="i18n-copy" data-i18n="现场完整版">Full Live Performance</span></button>
             </div>
             <div class="project-cover project-video-player">
-              <button class="video-launch" type="button" data-concert-launch data-video-src="assets/concert-web.webm" data-video-poster="assets/concert-preview-frame.jpg" data-video-title="《风华声脉》预览版" aria-label="播放风华声脉预览版">
-                <img loading="lazy" decoding="async" src="assets/concert-preview-frame.jpg" alt="风华声脉预览版视频画面" />
-                <span data-concert-play-label>播放预览版</span>
+              <button class="video-launch" type="button" data-concert-launch="" data-video-src="assets/concert-web.webm" data-video-poster="assets/concert-preview-frame.jpg" data-video-title="Elegant Rhythms of Legacy · Preview" aria-label="Play Elegant Rhythms of Legacy Preview" data-i18n-attrs="{&quot;aria-label&quot;:&quot;播放风华声脉预览版&quot;,&quot;data-video-title&quot;:&quot;《风华声脉》预览版&quot;}">
+                <img loading="lazy" decoding="async" src="assets/concert-preview-frame.jpg" alt="Elegant Rhythms of Legacy: preview frame" data-i18n-attrs="{&quot;alt&quot;:&quot;风华声脉预览版视频画面&quot;}">
+                <span data-concert-play-label="" data-i18n="播放预览版">Play Preview</span>
               </button>
             </div>
           </div>
-          <div class="project-body">
-            <p class="eyebrow">STAGE VISUAL DESIGN</p>
-            <h2>杭州金沙湖大剧院《风华声脉》音乐会</h2>
-            <p>
-              担任跨专业联合毕设项目导演与视觉主创，负责舞台视觉全案策划、曲目主题视觉定义、美术风格统一、
-              直角双纱幕投影体系设计，以及数字人报幕形象与文案制作。
-            </p>
-            <dl class="project-meta">
-              <div><dt>职责</dt><dd>项目导演 / 视觉主创</dd></div>
-              <div><dt>视觉方向</dt><dd>瓷器、傩面、鱼灯等中式民俗符号</dd></div>
-              <div><dt>交付</dt><dd>沉浸式视听舞台完整落地</dd></div>
+
+          <section class="project-process" id="concert-process" aria-labelledby="concert-process-title">
+            <header class="process-heading">
+              <p class="process-kicker" data-i18n="创作过程">Creative Process</p>
+              <h3 id="concert-process-title" data-i18n="让视觉成为音乐的一部分">Making visuals part of the music</h3>
+              <p data-i18n="如何让舞台影像参与音乐表达，而不只是成为演奏背后的背景？这次跨专业音乐会以中国民族音乐的情绪与文化意象为起点，将纱幕空间、动态视觉和现场演奏共同组织成一场视听体验。">How can stage visuals take part in musical expression, rather than remain a backdrop? This interdisciplinary concert began with the moods and cultural imagery of Chinese traditional music, bringing scrim projections, moving images and live piano performance into one audiovisual experience.</p>
+            </header>
+            <dl class="process-facts">
+              <div><dt data-i18n="合作形式">Collaboration</dt><dd data-i18n="数字媒体艺术 × 音乐表演（钢琴）">Digital media art × Piano performance</dd></div>
+              <div><dt data-i18n="创作周期">Development</dt><dd data-i18n="2025年9月 - 2026年1月">September 2025 - January 2026</dd></div>
+              <div><dt data-i18n="正式演出">Live Performance</dt><dd data-i18n="2026年1月15日">15 January 2026</dd></div>
+              <div><dt data-i18n="投影配置">Projection Setup</dt><dd data-i18n="近直角双纱幕 / 单面 2920 × 1200">Two angled scrims / 2920 × 1200 per surface</dd></div>
             </dl>
-          </div>
+            <section class="process-block">
+              <header class="process-heading">
+                <p class="process-kicker" data-i18n="01 / 空间设计">01 / SPATIAL DESIGN</p>
+                <h4 data-i18n="从场地条件出发，组织双纱幕空间">Designing for two projection surfaces</h4>
+              </header>
+              <div class="process-spatial-grid">
+                <figure class="process-figure">
+              <button class="process-image" type="button" data-lightbox="assets/concert-process-stage-plan.webp" aria-label="Enlarge Stage Planning" data-i18n-attrs="{&quot;aria-label&quot;:&quot;放大查看舞台空间规划&quot;}">
+                <img loading="lazy" decoding="async" src="assets/concert-process-stage-plan.webp" width="826" height="718" alt="Dual-scrim planning and venue survey" data-i18n-attrs="{&quot;alt&quot;:&quot;双纱幕空间规划与场地勘查&quot;}">
+              </button>
+              <figcaption data-i18n="场地平面草图与现场勘查照片。">Venue sketch and site-survey photograph.</figcaption>
+            </figure>
+                <div class="process-copy">
+                  <p data-i18n="纱幕的通透性保留了表演者与舞台的纵深。根据现场条件，我采用近直角的双纱幕结构，让影像在两个方向上展开，而不是封闭在一张平面屏幕里。">The translucency of the scrims preserves the performers and the depth of the stage. Responding to the venue, I used two scrims set at roughly a right angle so that imagery could extend in two directions instead of remaining on a flat screen.</p>
+                  <p data-i18n="这个结构也改变了画面制作方式：超宽构图需要考虑转角衔接、横向延展与观众主视角，重要内容则安排在更易观看的位置。">This arrangement shaped the content: ultrawide compositions had to account for the corner, horizontal continuity and the audience's main sightline, with key imagery placed where it could be seen clearly.</p>
+                </div>
+              </div>
+            </section>
+            <section class="process-block process-visual-development">
+              <header class="process-heading">
+                <p class="process-kicker" data-i18n="02 / 视觉开发">02 / VISUAL DEVELOPMENT</p>
+                <h4 data-i18n="把文化意象转化为动态视觉">From cultural motifs to moving images</h4>
+                <p data-i18n="我先依据曲目的节奏、情绪与文化背景确定视觉方向，再使用 AIGC 探索风格和生成基础素材。对瓷器、傩面、鱼灯等具体意象，我比较不同模型的生成结果，再用 TouchDesigner 和动态制作把它们转化为舞台内容。AIGC 是辅助环节，而不是整场视觉的唯一来源。">I defined a visual direction for each piece through its rhythm, mood and cultural context, then used AIGC to explore styles and generate source material. For porcelain, Nuo masks and fish lanterns, I compared outputs from different models before developing them into stage content with TouchDesigner and animation. AIGC supported the process rather than supplying the entire visual production.</p>
+              </header>
+              <div class="process-theme-study">
+                <header class="process-study-heading">
+                <h5 data-i18n="傩戏主题视觉探索">Nuo-themed visual studies</h5>
+                <p data-i18n="以傩面、火光和仪式空间作为视觉线索，通过深红与金色形成统一的画面气质。">Nuo masks, firelight and ritual spaces provide visual cues, with deep reds and gold giving the imagery a consistent mood.</p>
+                </header>
+                <div class="process-study-grid process-theme-grid">
+                  <figure class="process-figure">
+                    <button class="process-image" type="button" data-lightbox="assets/concert-nuo-mask.webp" aria-label="Enlarge Nuo Mask Study" data-i18n-attrs="{&quot;aria-label&quot;:&quot;放大查看傩面视觉&quot;}">
+                      <img loading="lazy" decoding="async" src="assets/concert-nuo-mask.webp" width="2200" height="934" alt="Red Nuo mask emerging from a dark background" data-i18n-attrs="{&quot;alt&quot;:&quot;深色背景中浮现的红色傩面&quot;}">
+                    </button>
+                    <figcaption data-i18n="傩面 / 深红色调">Mask / Deep red tones</figcaption>
+                  </figure>
+                  <figure class="process-figure">
+                    <button class="process-image" type="button" data-lightbox="assets/concert-nuo-symbols.webp" aria-label="Enlarge Firelight and Symbol Study" data-i18n-attrs="{&quot;aria-label&quot;:&quot;放大查看火光与符号视觉&quot;}">
+                      <img loading="lazy" decoding="async" src="assets/concert-nuo-symbols.webp" width="2200" height="911" alt="Golden symbols and firelight over dark Nuo-themed imagery" data-i18n-attrs="{&quot;alt&quot;:&quot;暗色傩戏意象上的金色符号与火光&quot;}">
+                    </button>
+                    <figcaption data-i18n="符号 / 火光与字符">Symbols / Firelight and glyphs</figcaption>
+                  </figure>
+                  <figure class="process-figure">
+                    <button class="process-image" type="button" data-lightbox="assets/concert-nuo-ritual.webp" aria-label="Enlarge Ritual Space Study" data-i18n-attrs="{&quot;aria-label&quot;:&quot;放大查看仪式空间视觉&quot;}">
+                      <img loading="lazy" decoding="async" src="assets/concert-nuo-ritual.webp" width="2200" height="895" alt="A red ritual space with candles and floating golden symbols" data-i18n-attrs="{&quot;alt&quot;:&quot;烛光与金色符号构成的红色仪式空间&quot;}">
+                    </button>
+                    <figcaption data-i18n="空间 / 仪式氛围">Space / Ritual atmosphere</figcaption>
+                  </figure>
+                </div>
+              </div>
+              <div class="process-particle-study">
+                <header class="process-study-heading process-stacked-heading">
+                  <h5 data-i18n="粒子与音频驱动视觉">Particles and audio-reactive visuals</h5>
+                  <p data-i18n="在 TouchDesigner 中调整粒子的数量、尺度、扩散与运动方向，并通过音频输入建立声画响应，让可辨识的文化符号转向更流动的情绪表达。">In TouchDesigner, I adjusted particle count, scale, dispersion and movement, using audio input to connect sound and image. Recognisable cultural motifs became more fluid expressions of mood.</p>
+                </header>
+                <figure class="process-figure">
+                  <button class="process-image" type="button" data-lightbox="assets/concert-process-particles.webp" aria-label="Enlarge Particle Studies" data-i18n-attrs="{&quot;aria-label&quot;:&quot;放大查看粒子视觉实验&quot;}">
+                    <img loading="lazy" decoding="async" src="assets/concert-process-particles.webp" width="1268" height="713" alt="Porcelain and Nuo mask particle studies" data-i18n-attrs="{&quot;alt&quot;:&quot;瓷器与傩面粒子视觉&quot;}">
+                  </button>
+                  <figcaption data-i18n="瓷器与傩面的粒子化视觉实验。">Particle-based studies of porcelain and a Nuo mask.</figcaption>
+                </figure>
+              </div>
+              <div class="process-host-study">
+                <header class="process-study-heading process-stacked-heading">
+                <h5 data-i18n="数字人报幕">Digital host</h5>
+                <p data-i18n="为曲目撰写报幕文案，用 MiniMax 生成语音，再以即梦制作数字人形象。在保持角色整体形象一致的同时，以服装、色彩和环境区分瓷器、鱼灯与傩戏主题，让报幕延续整场的视觉语言。">I wrote the introductions, generated voiceovers with MiniMax and created the digital host with Jimeng. A consistent character is placed in different costumes, colours and settings for porcelain, fish lanterns and Nuo performance, extending the concert's visual language into its introductions.</p>
+                </header>
+                <div class="process-study-grid process-host-grid">
+                  <figure class="process-figure">
+                    <button class="process-image" type="button" data-lightbox="assets/concert-host-porcelain.webp" aria-label="Enlarge Porcelain Soul Host" data-i18n-attrs="{&quot;aria-label&quot;:&quot;放大查看瓷魂数字人&quot;}">
+                      <img loading="lazy" decoding="async" src="assets/concert-host-porcelain.webp" width="2200" height="943" alt="Porcelain Soul digital host with ceramic vessels and a kiln" data-i18n-attrs="{&quot;alt&quot;:&quot;瓷魂数字人与瓷器、窑火背景&quot;}">
+                    </button>
+                    <figcaption data-i18n="《瓷魂》 / 瓷器与窑火">Ci Hun (Porcelain Soul) / Ceramics and kiln fire</figcaption>
+                  </figure>
+                  <figure class="process-figure">
+                    <button class="process-image" type="button" data-lightbox="assets/concert-host-fish-lantern.webp" aria-label="Enlarge Fish Lantern Play Host" data-i18n-attrs="{&quot;aria-label&quot;:&quot;放大查看戏鱼灯数字人&quot;}">
+                      <img loading="lazy" decoding="async" src="assets/concert-host-fish-lantern.webp" width="2200" height="943" alt="Fish Lantern Play digital host with illuminated fish lanterns" data-i18n-attrs="{&quot;alt&quot;:&quot;戏鱼灯数字人与灯彩背景&quot;}">
+                    </button>
+                    <figcaption data-i18n="《戏鱼灯》 / 鱼灯与灯彩">Xi Yu Deng (Fish Lantern Play) / Fish lanterns and festive lights</figcaption>
+                  </figure>
+                  <figure class="process-figure">
+                    <button class="process-image" type="button" data-lightbox="assets/concert-host-nuo.webp" aria-label="Enlarge Nuo-Themed Host" data-i18n-attrs="{&quot;aria-label&quot;:&quot;放大查看傩祭之鸢数字人&quot;}">
+                      <img loading="lazy" decoding="async" src="assets/concert-host-nuo.webp" width="2200" height="943" alt="Nuo-themed digital host with masks and firelight" data-i18n-attrs="{&quot;alt&quot;:&quot;傩祭之鸢数字人与傩面、火光背景&quot;}">
+                    </button>
+                    <figcaption data-i18n="《傩祭之鸢》 / 傩面与火光">Nuo Ji Zhi Yuan / Nuo masks and firelight</figcaption>
+                  </figure>
+                </div>
+              </div>
+            </section>
+            <section class="process-block">
+              <header class="process-heading">
+                <p class="process-kicker" data-i18n="03 / 排练与落地">03 / REHEARSAL &amp; PRODUCTION</p>
+                <h4 data-i18n="在排练中校准视觉与演奏的关系">Calibrating visuals with the performance</h4>
+                <p data-i18n="我按节目顺序整理素材和切换节点，并在联排中根据演奏速度、停顿和灯光变化，调整画面起落点、转场与亮度。舞蹈与鼓乐段落降低投影的视觉强度；钢琴映射则配合压低环境光，让演奏始终保持观看重心。">I organised assets and cues in programme order, then refined visual entries, transitions and brightness during rehearsals in response to tempo, pauses and lighting. Projection intensity was reduced during dance and percussion passages; ambient light was lowered for piano mapping so that the performance remained the focus.</p>
+              </header>
+              <div class="process-visual-grid">
+                <figure class="process-figure">
+              <button class="process-image" type="button" data-lightbox="assets/concert-process-piano-rehearsal.webp" aria-label="Enlarge Piano Mapping Rehearsal" data-i18n-attrs="{&quot;aria-label&quot;:&quot;放大查看钢琴映射彩排&quot;}">
+                <img loading="lazy" decoding="async" src="assets/concert-process-piano-rehearsal.webp" width="1142" height="641" alt="Mi Xia: piano mapping rehearsal" data-i18n-attrs="{&quot;alt&quot;:&quot;弥夏钢琴映射彩排&quot;}">
+              </button>
+              <figcaption data-i18n="《弥夏》彩排：钢琴映射与现场灯光的配合。">Mi Xia rehearsal: piano projection mapping and stage lighting.</figcaption>
+            </figure>
+                <figure class="process-figure">
+              <button class="process-image" type="button" data-lightbox="assets/concert-process-live-stage.webp" aria-label="Enlarge Live Performance Documentation" data-i18n-attrs="{&quot;aria-label&quot;:&quot;放大查看现场演出&quot;}">
+                <img loading="lazy" decoding="async" src="assets/concert-process-live-stage.webp" width="904" height="508" alt="Elegant Rhythms of Legacy: live dual-scrim performance" data-i18n-attrs="{&quot;alt&quot;:&quot;风华声脉双纱幕现场演出&quot;}">
+              </button>
+              <figcaption data-i18n="正式演出：双纱幕影像与现场表演共同构成空间氛围。">Live performance: dual-scrim imagery and performers share the stage environment.</figcaption>
+            </figure>
+              </div>
+            </section>
+            <section class="process-block process-reflection">
+              <header class="process-heading">
+                <p class="process-kicker" data-i18n="04 / 创作复盘">04 / REFLECTION</p>
+                <h4 data-i18n="从画面效果，回到观看体验">From visual effects to the viewing experience</h4>
+              </header>
+              <div class="process-reflection-grid">
+                <div><h5 data-i18n="视觉服务演奏">Serve the performance</h5><p data-i18n="画面的复杂度与亮度需要随表演调整。视觉应回应音乐，而不是让演奏被动地适应预制影像。">Visual complexity and brightness should respond to the performance. Images should follow the music rather than require a performance to fit pre-made visuals.</p></div>
+                <div><h5 data-i18n="跨幕连续性">Continuity across the corner</h5><p data-i18n="部分超宽画面在转角处的衔接仍需细化。后续制作应更早地把双面构图与主视角检查纳入测试。">Some ultrawide compositions still needed finer continuity at the corner. Future development should test two-surface composition and the main sightline earlier in the process.</p></div>
+                <div><h5 data-i18n="现场响应与校准">Live response and calibration</h5><p data-i18n="音频响应内容对设备状态与参数变化较敏感。稳定的现场呈现需要反复校准，技术调试也是视觉设计的一部分。">Audio-reactive content was sensitive to equipment conditions and parameter changes. A stable live presentation requires repeated calibration; technical testing is part of visual design.</p></div>
+              </div>
+            </section>
+          </section>
         </article>
 
-        <article class="project-detail reverse" id="project-payment" data-category-item="aigc" data-aigc-kind="ad" hidden>
+<article class="case-layout project-detail" id="project-yexing" data-category-item="aigc" data-aigc-kind="featured" hidden="">
+          <div class="project-body case-heading">
+            <div class="case-title">
+              <p class="eyebrow">04 / AI SHORT DRAMA · 2026</p>
+              <h2 data-i18n="夜行骇客">Night Hacker</h2>
+              <p class="case-subtitle" data-i18n="AI 漫剧 / 生成式影像">AI animated drama / Generative imagery</p>
+            </div>
+            <div class="case-intro">
+              <p data-i18n="以赛博城市空间、故障质感与快速镜头完成悬疑氛围表达。">Cyberpunk cityscapes, glitch textures and rapid cuts create an atmosphere of suspense.</p>
+              <button class="case-watch" type="button" data-video-src="assets/ai-drama-yexing-web.webm" data-video-poster="assets/yexing-title-frame.jpg" data-video-title="Night Hacker · Episode 1" data-i18n-attrs="{&quot;data-video-title&quot;:&quot;《夜行骇客》第一集&quot;}"><span class="i18n-copy" data-i18n="观看完整成片">Watch Full Film</span><span aria-hidden="true">↘</span></button>
+            </div>
+            <dl class="project-meta">
+              <div><dt data-i18n="本人职责">My Role</dt><dd data-i18n="导演">Director</dd></div>
+              <div><dt data-i18n="形式">Format</dt><dd data-i18n="AI 漫剧 / 横屏影像">AI animated drama / Landscape format</dd></div>
+              <div><dt data-i18n="章节">Episode</dt><dd data-i18n="第一集">Episode 1</dd></div>
+            </dl>
+          </div>
           <div class="project-cover project-video-player">
-            <button class="video-launch" type="button" data-video-src="assets/aigc-payment-web.webm" data-video-poster="assets/aigc-payment-title.jpg" data-video-title="《无界支付》" aria-label="播放无界支付 AI 广告">
-              <img loading="lazy" decoding="async" src="assets/aigc-payment-title.jpg" alt="无界支付视频标题画面" />
-              <span>播放完整视频</span>
+            <button class="video-launch" type="button" data-video-src="assets/ai-drama-yexing-web.webm" data-video-poster="assets/yexing-title-frame.jpg" data-video-title="Night Hacker · Episode 1" aria-label="Play Night Hacker Episode 1" data-i18n-attrs="{&quot;aria-label&quot;:&quot;播放夜行骇客第一集&quot;,&quot;data-video-title&quot;:&quot;《夜行骇客》第一集&quot;}">
+              <img loading="lazy" decoding="async" src="assets/yexing-title-frame.jpg" alt="Night Hacker: title frame" data-i18n-attrs="{&quot;alt&quot;:&quot;夜行骇客中英文片名画面&quot;}">
+              <span data-i18n="播放完整视频">Play Full Film</span>
             </button>
           </div>
-          <div class="project-body">
-            <p class="eyebrow">AI COMMERCIAL</p>
-            <h2>《无界支付》</h2>
-            <p>
-              以 AI 多风格画面能力构建跨时代叙事，在复古未来、魔法、中世纪等视觉体系中呈现人物遇到阻碍后快速解决问题的故事，
-              最终回到现实，传达银行卡付款无限制的概念。
-            </p>
-            <dl class="project-meta">
-              <div><dt>成果</dt><dd>第 23 届上海国际大学生广告节入围</dd></div>
-              <div><dt>职责</dt><dd>AI 生图 / 视频生成 / 叙事剪辑</dd></div>
-              <div><dt>工具</dt><dd>Midjourney / Runway</dd></div>
-            </dl>
-          </div>
+          <section id="yexing-process" aria-labelledby="yexing-process-title">
+            <header class="yexing-design-heading">
+              <p class="yexing-design-kicker" data-i18n="视觉开发">Visual Development</p>
+              <h3 id="yexing-process-title" data-i18n="角色与场景设计">Character &amp; Environment Design</h3>
+            </header>
+            <section class="yexing-design-block">
+              <header class="yexing-design-heading">
+                <p class="yexing-design-kicker" data-i18n="01 / 角色">01 / CHARACTER</p>
+                <h4 data-i18n="角色设计">Character Design</h4>
+                <p data-i18n="灰色连帽衫、工装裤和简洁的轮廓构成角色的日常感。近景与三视图分别呈现面部特征、服装比例及不同角度下的形象。">A grey hoodie, cargo trousers and a simple silhouette give the character an everyday appearance. The close-up and three-view sheet present facial features, costume proportions and the design from different angles.</p>
+              </header>
+              <div class="yexing-design-grid">
+                <figure>
+                  <button class="yexing-design-image" type="button" data-lightbox="assets/yexing-design-character.webp" aria-label="Enlarge Character Close-up" data-i18n-attrs="{&quot;aria-label&quot;:&quot;放大查看角色近景&quot;}">
+                    <img loading="lazy" decoding="async" src="assets/yexing-design-character.webp" width="2752" height="1536" alt="Night Hacker character close-up: dark hair and a grey hoodie" data-i18n-attrs="{&quot;alt&quot;:&quot;夜行骇客角色近景：黑发与灰色连帽衫&quot;}">
+                  </button>
+                  <figcaption data-i18n="角色近景">Character Close-up</figcaption>
+                </figure>
+                <figure>
+                  <button class="yexing-design-image" type="button" data-lightbox="assets/yexing-design-character-views.webp" aria-label="Enlarge Character Views" data-i18n-attrs="{&quot;aria-label&quot;:&quot;放大查看角色三视图&quot;}">
+                    <img loading="lazy" decoding="async" src="assets/yexing-design-character-views.webp" width="2752" height="1536" alt="Night Hacker character design shown from the front, three-quarter view and back" data-i18n-attrs="{&quot;alt&quot;:&quot;夜行骇客角色的正面、侧前方与背面造型&quot;}">
+                  </button>
+                  <figcaption data-i18n="角色三视图">Character Views</figcaption>
+                </figure>
+              </div>
+            </section>
+            <section class="yexing-design-block">
+              <header class="yexing-design-heading">
+                <p class="yexing-design-kicker" data-i18n="02 / 场景">02 / ENVIRONMENTS</p>
+                <h4 data-i18n="场景设计">Environment Design</h4>
+                <p data-i18n="青绿色冷光与红色霓虹、灯笼形成对比，湿地反光和雾气连接城市外景、巷道与游戏厅。老式街机与密集招牌强化空间的复古科技感。">Teal lighting contrasts with red neon and lanterns. Wet reflections and haze link the city exterior, alleyway and arcade, while ageing arcade cabinets and dense signage establish a retro-futurist atmosphere.</p>
+              </header>
+              <div class="yexing-design-grid">
+                <figure>
+                  <button class="yexing-design-image" type="button" data-lightbox="assets/yexing-design-city.webp" aria-label="Enlarge City Exterior" data-i18n-attrs="{&quot;aria-label&quot;:&quot;放大查看城市外景&quot;}">
+                    <img loading="lazy" decoding="async" src="assets/yexing-design-city.webp" width="2752" height="1536" alt="Night city exterior with a neon Liuguang City sign and haze" data-i18n-attrs="{&quot;alt&quot;:&quot;夜间城市外景：流光城霓虹招牌与雾气&quot;}">
+                  </button>
+                  <figcaption data-i18n="城市外景">City Exterior</figcaption>
+                </figure>
+                <figure>
+                  <button class="yexing-design-image" type="button" data-lightbox="assets/yexing-design-alley.webp" aria-label="Enlarge Alleyway" data-i18n-attrs="{&quot;aria-label&quot;:&quot;放大查看巷道场景&quot;}">
+                    <img loading="lazy" decoding="async" src="assets/yexing-design-alley.webp" width="2752" height="1536" alt="Narrow alleyway with arcade cabinets, red lanterns and wet reflections" data-i18n-attrs="{&quot;alt&quot;:&quot;巷道中的街机、红灯笼与湿地反光&quot;}">
+                  </button>
+                  <figcaption data-i18n="巷道场景">Alleyway</figcaption>
+                </figure>
+                <figure>
+                  <button class="yexing-design-image" type="button" data-lightbox="assets/yexing-design-arcade-entrance.webp" aria-label="Enlarge Arcade Entrance" data-i18n-attrs="{&quot;aria-label&quot;:&quot;放大查看游戏厅入口&quot;}">
+                    <img loading="lazy" decoding="async" src="assets/yexing-design-arcade-entrance.webp" width="2752" height="1536" alt="Red neon arcade sign in a rainy, teal-lit street" data-i18n-attrs="{&quot;alt&quot;:&quot;雨中青绿色街道里的红色游戏厅霓虹招牌&quot;}">
+                  </button>
+                  <figcaption data-i18n="游戏厅入口">Arcade Entrance</figcaption>
+                </figure>
+                <figure>
+                  <button class="yexing-design-image" type="button" data-lightbox="assets/yexing-design-arcade-interior.webp" aria-label="Enlarge Arcade Interior" data-i18n-attrs="{&quot;aria-label&quot;:&quot;放大查看游戏厅内景&quot;}">
+                    <img loading="lazy" decoding="async" src="assets/yexing-design-arcade-interior.webp" width="2752" height="1536" alt="Arcade interior with ageing cabinets, screen light and hanging lanterns" data-i18n-attrs="{&quot;alt&quot;:&quot;游戏厅内景：老式街机、屏幕光与悬挂灯笼&quot;}">
+                  </button>
+                  <figcaption data-i18n="游戏厅内景">Arcade Interior</figcaption>
+                </figure>
+              </div>
+            </section>
+            <section class="yexing-design-block">
+              <header class="yexing-design-heading">
+                <p class="yexing-design-kicker" data-i18n="03 / 构图">03 / COMPOSITION</p>
+                <h4 data-i18n="多视角构图">Multi-angle Composition</h4>
+                <p data-i18n="同一游戏厅从全景到街机与地面细节展开，比较景别与视角的变化，为镜头选择和场景衔接提供参考。">Views of the same arcade range from wide compositions to details of the cabinets and floor. The sheet compares framing and viewpoints as references for shot selection and continuity between shots.</p>
+              </header>
+              <figure class="yexing-design-wide">
+                <button class="yexing-design-image" type="button" data-lightbox="assets/yexing-design-multi-angle.webp" aria-label="Enlarge Multi-angle Study" data-i18n-attrs="{&quot;aria-label&quot;:&quot;放大查看多视角九宫格&quot;}">
+                  <img loading="lazy" decoding="async" src="assets/yexing-design-multi-angle.webp" width="2752" height="1536" alt="Nine-frame arcade study with wide views, cabinet details and low-angle compositions" data-i18n-attrs="{&quot;alt&quot;:&quot;游戏厅九宫格：全景、街机细节与低角度构图&quot;}">
+                </button>
+                <figcaption data-i18n="游戏厅 / 多视角九宫格">Arcade / Nine-frame Viewpoint Study</figcaption>
+              </figure>
+            </section>
+          </section>
         </article>
 
-        <article class="project-detail" id="project-daynight" data-category-item="aigc" data-aigc-kind="ad" hidden>
+<article class="case-layout project-detail" id="project-spanish" data-category-item="aigc" data-aigc-kind="featured" hidden="">
+          <div class="project-body case-heading">
+            <div class="case-title case-title-long">
+              <p class="eyebrow">05 / SPANISH TRAILER</p>
+              <h2 data-i18n="西语短剧预告片">Spanish Drama Trailer</h2>
+              <p class="case-subtitle">No Te Metas con la Niña Milagro de Papá</p>
+            </div>
+            <div class="case-intro">
+              <p data-i18n="西语短剧的宣传预告片，展示面向海外内容的叙事剪辑与节奏表达。">A promotional trailer for a Spanish-language short-form drama, focusing on narrative editing and pacing for an overseas audience.</p>
+              <button class="case-watch" type="button" data-video-src="assets/ai-drama-trailer-web.webm" data-video-poster="assets/overseas-trailer-logo-frame.jpg" data-video-title="Spanish Drama Trailer" data-i18n-attrs="{&quot;data-video-title&quot;:&quot;西语短剧宣传预告片&quot;}"><span class="i18n-copy" data-i18n="观看完整预告">Watch Full Trailer</span><span aria-hidden="true">↘</span></button>
+            </div>
+            <dl class="project-meta">
+              <div><dt data-i18n="本人职责">My Role</dt><dd data-i18n="剪辑">Editor</dd></div>
+              <div><dt data-i18n="形式">Format</dt><dd data-i18n="短剧宣传预告片">Drama promotional trailer</dd></div>
+              <div><dt data-i18n="语言">Language</dt><dd data-i18n="西班牙语">Spanish</dd></div>
+            </dl>
+          </div>
           <div class="project-cover project-video-player">
-            <button class="video-launch" type="button" data-video-src="assets/aigc-daynight-web.webm" data-video-poster="assets/aigc-daynight-title.jpg" data-video-title="《昼夜之核》" aria-label="播放昼夜之核 AI 广告">
-              <img loading="lazy" decoding="async" src="assets/aigc-daynight-title.jpg" alt="昼夜之核视频标题画面" />
-              <span>播放完整视频</span>
+            <button class="video-launch" type="button" data-video-src="assets/ai-drama-trailer-web.webm" data-video-poster="assets/overseas-trailer-logo-frame.jpg" data-video-title="Spanish Drama Trailer" aria-label="Play Spanish Drama Trailer" data-i18n-attrs="{&quot;aria-label&quot;:&quot;播放西语短剧宣传预告片&quot;,&quot;data-video-title&quot;:&quot;西语短剧宣传预告片&quot;}">
+              <img loading="lazy" decoding="async" src="assets/overseas-trailer-logo-frame.jpg" alt="No Te Metas con la Niña Milagro de Papá: title frame" data-i18n-attrs="{&quot;alt&quot;:&quot;No Te Metas con la Niña Milagro de Papá 西语短剧片名画面&quot;}">
+              <span data-i18n="播放完整预告">Play Full Trailer</span>
             </button>
           </div>
-          <div class="project-body">
-            <p class="eyebrow">AI COMMERCIAL</p>
-            <h2>《昼夜之核》</h2>
-            <p>
-              以宇宙七十亿年的时间尺度类比企业“七十年，专注做一颗好电池”，以宇宙爆发之初的能量映射电池所蕴含的能量，
-              通过 AIGC 将宏观宇宙意象与品牌产品叙事连接起来。
-            </p>
-            <dl class="project-meta">
-              <div><dt>成果</dt><dd>学院奖 2024 春季征集大赛参赛作品</dd></div>
-              <div><dt>方向</dt><dd>AI 广告 / 品牌概念叙事</dd></div>
-              <div><dt>形式</dt><dd>AIGC 视觉生成 / 动态合成 / 后期剪辑</dd></div>
-            </dl>
-          </div>
+          <section id="spanish-editing-process" aria-labelledby="spanish-editing-title">
+            <header class="editing-process-heading">
+              <p class="eyebrow" data-i18n="剪辑过程">Editing Process</p>
+              <h3 id="spanish-editing-title" data-i18n="剪辑与上线记录">Editing &amp; Release</h3>
+            </header>
+            <div class="editing-evidence-grid">
+              <figure>
+                <h4 class="editing-evidence-title" data-i18n="剪辑时间线">Editing Timeline</h4>
+                <button class="editing-process-image" type="button" data-lightbox="assets/spanish-editing-timeline-clean.png" aria-label="Enlarge Editing Timeline" data-i18n-attrs="{&quot;aria-label&quot;:&quot;放大查看剪辑时间线&quot;}">
+                  <img loading="lazy" decoding="async" src="assets/spanish-editing-timeline-clean.png" width="2560" height="1392" alt="Spanish drama trailer editing workspace with video, subtitle and layered audio tracks" data-i18n-attrs="{&quot;alt&quot;:&quot;西语预告片剪辑工程：画面、字幕与多层音频轨道&quot;}">
+                </button>
+                <figcaption data-i18n="剪辑时间线将画面、字幕、对白、音乐与音效分层组织，通过镜头衔接与声音节奏推进预告片叙事。">The edit organises footage, subtitles, dialogue, music and sound effects on separate tracks. Shot transitions and sound pacing shape the trailer's narrative.</figcaption>
+              </figure>
+              <figure class="editing-release-record">
+                <h4 class="editing-evidence-title" data-i18n="上线记录">Release Record</h4>
+                <button class="editing-process-image" type="button" data-lightbox="assets/spanish-release-ranking.jpg" aria-label="Enlarge Release Record" data-i18n-attrs="{&quot;aria-label&quot;:&quot;放大查看上线记录&quot;}">
+                  <img loading="lazy" decoding="async" src="assets/spanish-release-ranking.jpg" width="1180" height="2556" alt="Platform daily chart showing No Te Metas con la Niña Milagro de Papá at No. 4 at the time of capture" data-i18n-attrs="{&quot;alt&quot;:&quot;平台日榜截图：该短剧在截图时位列第4&quot;}">
+                </button>
+                <figcaption data-i18n="该短剧在截图时位列平台日榜第 4；本人负责宣传预告片剪辑。">The drama ranked No. 4 on the platform's daily chart at the time of capture. My contribution was editing the promotional trailer.</figcaption>
+              </figure>
+            </div>
+          </section>
         </article>
 
-        <section class="project-library" id="project-shortdrama" data-category-item="aigc" data-aigc-kind="short" hidden>
-          <div class="library-heading">
-            <p class="eyebrow">AI SHORT DRAMA</p>
-            <h2>AI 漫剧作品</h2>
-            <p>以执行导演身份参与 AI 漫剧全流程制作，覆盖角色与场景生成、图片动态化、视频合成和节奏剪辑。</p>
+        <details class="aigc-archive" id="aigc-archive" data-category-item="aigc" data-aigc-kind="archive" hidden>
+          <summary><span data-i18n="更多 AIGC 作品">More Generative Work</span><span class="aigc-archive-count"><span class="i18n-copy" data-i18n="10 件">10 works</span><span class="aigc-archive-chevron" aria-hidden="true">⌄</span></span></summary>
+          <div class="subcategory-tabs" data-aigc-tabs="" hidden="" aria-label="Generative Film Categories" data-i18n-attrs="{&quot;aria-label&quot;:&quot;AIGC 影像分类&quot;}">
+            <button type="button" class="is-active" data-aigc-filter="short"><span class="i18n-copy" data-i18n="AI 短剧">AI Drama</span><span>AI SHORT DRAMA</span></button>
+            <button type="button" data-aigc-filter="ad"><span class="i18n-copy" data-i18n="AI 广告">AI Commercials</span><span>AI COMMERCIAL</span></button>
           </div>
-          <div class="video-library-grid short-drama-grid">
-            <article class="video-library-card is-portrait">
-              <button class="video-launch" type="button" data-video-src="assets/ai-drama-chunyang-web.webm" data-video-poster="assets/ai-drama-chunyang-poster-web.webp" data-video-title="开局纯阳圣体" aria-label="播放开局纯阳圣体"><img loading="lazy" decoding="async" src="assets/ai-drama-chunyang-poster-web.webp" alt="开局纯阳圣体视频封面" /><span>播放</span></button>
-              <div><span>EP.01</span><h3>开局纯阳圣体</h3></div>
-            </article>
-            <article class="video-library-card is-portrait">
-              <button class="video-launch" type="button" data-video-src="assets/ai-drama-qiangqu-web.webm" data-video-poster="assets/ai-drama-qiangqu-poster-web.webp" data-video-title="强娶主角长辈" aria-label="播放强娶主角长辈"><img loading="lazy" decoding="async" src="assets/ai-drama-qiangqu-poster-web.webp" alt="强娶主角长辈视频封面" /><span>播放</span></button>
-              <div><span>EP.02</span><h3>强娶主角长辈</h3></div>
-            </article>
-            <article class="video-library-card is-portrait">
-              <button class="video-launch" type="button" data-video-src="assets/ai-drama-minjian-web.webm" data-video-poster="assets/ai-drama-minjian-poster-web.webp" data-video-title="民间禁忌笔记" aria-label="播放民间禁忌笔记"><img loading="lazy" decoding="async" src="assets/ai-drama-minjian-poster-web.webp" alt="民间禁忌笔记视频封面" /><span>播放</span></button>
-              <div><span>EP.23</span><h3>民间禁忌笔记</h3></div>
-            </article>
-            <article class="video-library-card is-portrait">
-              <button class="video-launch" type="button" data-video-src="assets/ai-drama-bailong-web.webm" data-video-poster="assets/ai-drama-bailong-poster-web.webp" data-video-title="白龙飞马" aria-label="播放白龙飞马"><img loading="lazy" decoding="async" src="assets/ai-drama-bailong-poster-web.webp" alt="白龙飞马视频封面" /><span>播放</span></button>
-              <div><span>EP.04</span><h3>白龙飞马</h3></div>
-            </article>
-            <article class="video-library-card is-portrait">
-              <button class="video-launch" type="button" data-video-src="assets/ai-drama-chanmian-web.webm" data-video-poster="assets/ai-drama-chanmian-poster-web.webp" data-video-title="缠绵一夜，美女总裁爱上我" aria-label="播放缠绵一夜，美女总裁爱上我"><img loading="lazy" decoding="async" src="assets/ai-drama-chanmian-poster-web.webp" alt="缠绵一夜，美女总裁爱上我视频封面" /><span>播放</span></button>
-              <div><span>EP.01</span><h3>缠绵一夜，美女总裁爱上我</h3></div>
-            </article>
-            <article class="video-library-card is-portrait">
-              <button class="video-launch" type="button" data-video-src="assets/ai-drama-jinyiwei-web.webm" data-video-poster="assets/ai-drama-jinyiwei-poster-web.webp" data-video-title="身为锦衣卫我只手遮天有问题吗" aria-label="播放身为锦衣卫我只手遮天有问题吗"><img loading="lazy" decoding="async" src="assets/ai-drama-jinyiwei-poster-web.webp" alt="身为锦衣卫我只手遮天有问题吗视频封面" /><span>播放</span></button>
-              <div><span>EP.01</span><h3>身为锦衣卫我只手遮天有问题吗</h3></div>
-            </article>
-            <article class="video-library-card is-portrait">
-              <button class="video-launch" type="button" data-video-src="assets/ai-drama-yiwang-web.webm" data-video-poster="assets/ai-drama-yiwang-poster-web.webp" data-video-title="风流医王俏总裁" aria-label="播放风流医王俏总裁"><img loading="lazy" decoding="async" src="assets/ai-drama-yiwang-poster-web.webp" alt="风流医王俏总裁视频封面" /><span>播放</span></button>
-              <div><span>EP.01</span><h3>风流医王俏总裁！</h3></div>
-            </article>
-            <article class="video-library-card is-landscape">
-              <button class="video-launch" type="button" data-video-src="assets/ai-drama-yexing-web.webm" data-video-poster="assets/yexing-title-frame.jpg" data-video-title="夜行骇客" aria-label="播放夜行骇客"><img loading="lazy" decoding="async" src="assets/yexing-title-frame.jpg" alt="夜行骇客中英文片名画面" /><span>播放</span></button>
-              <div><span>EP.01</span><h3>夜行骇客</h3></div>
-            </article>
-            <article class="video-library-card is-portrait">
-              <button class="video-launch" type="button" data-video-src="assets/ai-drama-trailer-web.webm" data-video-poster="assets/overseas-trailer-logo-frame.jpg" data-video-title="海外 AI 漫剧预告片制作" aria-label="播放海外 AI 漫剧预告片制作"><img loading="lazy" decoding="async" src="assets/overseas-trailer-logo-frame.jpg" alt="海外 AI 漫剧预告片 Logo 画面" /><span>播放</span></button>
-              <div><span>TRAILER</span><h3>海外 AI 漫剧预告片制作</h3></div>
-            </article>
-          </div>
-        </section>
 
-        <article class="project-detail project-gallery-detail photography-layout" id="project-photography" data-category-item="photography" hidden>
-          <div class="project-body">
-            <p class="eyebrow">PHOTOGRAPHY</p>
-            <h2>风光与空间摄影</h2>
-            <p>关注自然光线、空间层次与旅途中的瞬间秩序，用克制构图记录环境情绪。</p>
+          <section class="project-library" id="project-shortdrama" data-category-item="aigc" data-aigc-kind="short" hidden="">
+            <div class="library-heading">
+              <p class="eyebrow">AI SHORT DRAMA</p>
+              <h2 data-i18n="AI 漫剧作品">AI Animated Dramas</h2>
+              <p data-i18n="以执行导演身份参与 AI 漫剧全流程制作，覆盖角色与场景生成、图片动态化、视频合成和节奏剪辑。">Participated as an execution director in the full production workflow for AI animated dramas, from character and scene generation to image animation, compositing and editing.</p>
+            </div>
+            <div class="video-library-grid short-drama-grid">
+              <article class="video-library-card is-portrait">
+                <button class="video-launch" type="button" data-video-src="assets/ai-drama-chunyang-web.webm" data-video-poster="assets/ai-drama-chunyang-poster-web.webp" data-video-title="Pure Yang Physique" aria-label="Play Pure Yang Physique" data-i18n-attrs="{&quot;aria-label&quot;:&quot;播放开局纯阳圣体&quot;,&quot;data-video-title&quot;:&quot;开局纯阳圣体&quot;}"><img loading="lazy" decoding="async" src="assets/ai-drama-chunyang-poster-web.webp" alt="Pure Yang Physique: video poster" data-i18n-attrs="{&quot;alt&quot;:&quot;开局纯阳圣体视频封面&quot;}"><span data-i18n="播放">Play</span></button>
+                <div><span>EP.01</span><h3 data-i18n="开局纯阳圣体">Pure Yang Physique</h3></div>
+              </article>
+              <article class="video-library-card is-portrait">
+                <button class="video-launch" type="button" data-video-src="assets/ai-drama-qiangqu-web.webm" data-video-poster="assets/ai-drama-qiangqu-poster-web.webp" data-video-title="A Forced Marriage" aria-label="Play A Forced Marriage" data-i18n-attrs="{&quot;aria-label&quot;:&quot;播放强娶主角长辈&quot;,&quot;data-video-title&quot;:&quot;强娶主角长辈&quot;}"><img loading="lazy" decoding="async" src="assets/ai-drama-qiangqu-poster-web.webp" alt="A Forced Marriage: video poster" data-i18n-attrs="{&quot;alt&quot;:&quot;强娶主角长辈视频封面&quot;}"><span data-i18n="播放">Play</span></button>
+                <div><span>EP.02</span><h3 data-i18n="强娶主角长辈">A Forced Marriage</h3></div>
+              </article>
+              <article class="video-library-card is-portrait">
+                <button class="video-launch" type="button" data-video-src="assets/ai-drama-minjian-web.webm" data-video-poster="assets/ai-drama-minjian-poster-web.webp" data-video-title="Notes on Folk Taboos" aria-label="Play Notes on Folk Taboos" data-i18n-attrs="{&quot;aria-label&quot;:&quot;播放民间禁忌笔记&quot;,&quot;data-video-title&quot;:&quot;民间禁忌笔记&quot;}"><img loading="lazy" decoding="async" src="assets/ai-drama-minjian-poster-web.webp" alt="Notes on Folk Taboos: video poster" data-i18n-attrs="{&quot;alt&quot;:&quot;民间禁忌笔记视频封面&quot;}"><span data-i18n="播放">Play</span></button>
+                <div><span>EP.23</span><h3 data-i18n="民间禁忌笔记">Notes on Folk Taboos</h3></div>
+              </article>
+              <article class="video-library-card is-portrait">
+                <button class="video-launch" type="button" data-video-src="assets/ai-drama-bailong-web.webm" data-video-poster="assets/ai-drama-bailong-poster-web.webp" data-video-title="White Dragon, Flying Horse" aria-label="Play White Dragon, Flying Horse" data-i18n-attrs="{&quot;aria-label&quot;:&quot;播放白龙飞马&quot;,&quot;data-video-title&quot;:&quot;白龙飞马&quot;}"><img loading="lazy" decoding="async" src="assets/ai-drama-bailong-poster-web.webp" alt="White Dragon, Flying Horse: video poster" data-i18n-attrs="{&quot;alt&quot;:&quot;白龙飞马视频封面&quot;}"><span data-i18n="播放">Play</span></button>
+                <div><span>EP.04</span><h3 data-i18n="白龙飞马">White Dragon, Flying Horse</h3></div>
+              </article>
+              <article class="video-library-card is-portrait">
+                <button class="video-launch" type="button" data-video-src="assets/ai-drama-chanmian-web.webm" data-video-poster="assets/ai-drama-chanmian-poster-web.webp" data-video-title="One Night with the CEO" aria-label="Play One Night with the CEO" data-i18n-attrs="{&quot;aria-label&quot;:&quot;播放缠绵一夜，美女总裁爱上我&quot;,&quot;data-video-title&quot;:&quot;缠绵一夜，美女总裁爱上我&quot;}"><img loading="lazy" decoding="async" src="assets/ai-drama-chanmian-poster-web.webp" alt="One Night with the CEO: video poster" data-i18n-attrs="{&quot;alt&quot;:&quot;缠绵一夜，美女总裁爱上我视频封面&quot;}"><span data-i18n="播放">Play</span></button>
+                <div><span>EP.01</span><h3 data-i18n="缠绵一夜，美女总裁爱上我">One Night with the CEO</h3></div>
+              </article>
+              <article class="video-library-card is-portrait">
+                <button class="video-launch" type="button" data-video-src="assets/ai-drama-jinyiwei-web.webm" data-video-poster="assets/ai-drama-jinyiwei-poster-web.webp" data-video-title="The All-Powerful Imperial Guard" aria-label="Play The All-Powerful Imperial Guard" data-i18n-attrs="{&quot;aria-label&quot;:&quot;播放身为锦衣卫我只手遮天有问题吗&quot;,&quot;data-video-title&quot;:&quot;身为锦衣卫我只手遮天有问题吗&quot;}"><img loading="lazy" decoding="async" src="assets/ai-drama-jinyiwei-poster-web.webp" alt="The All-Powerful Imperial Guard: video poster" data-i18n-attrs="{&quot;alt&quot;:&quot;身为锦衣卫我只手遮天有问题吗视频封面&quot;}"><span data-i18n="播放">Play</span></button>
+                <div><span>EP.01</span><h3 data-i18n="身为锦衣卫我只手遮天有问题吗">The All-Powerful Imperial Guard</h3></div>
+              </article>
+              <article class="video-library-card is-portrait">
+                <button class="video-launch" type="button" data-video-src="assets/ai-drama-yiwang-web.webm" data-video-poster="assets/ai-drama-yiwang-poster-web.webp" data-video-title="The Doctor and the CEO" aria-label="Play The Doctor and the CEO" data-i18n-attrs="{&quot;aria-label&quot;:&quot;播放风流医王俏总裁&quot;,&quot;data-video-title&quot;:&quot;风流医王俏总裁&quot;}"><img loading="lazy" decoding="async" src="assets/ai-drama-yiwang-poster-web.webp" alt="The Doctor and the CEO: video poster" data-i18n-attrs="{&quot;alt&quot;:&quot;风流医王俏总裁视频封面&quot;}"><span data-i18n="播放">Play</span></button>
+                <div><span>EP.01</span><h3 data-i18n="风流医王俏总裁！">The Doctor and the CEO</h3></div>
+              </article>
+            </div>
+          </section>
+
+          <article class="project-detail" id="project-jinnong" data-category-item="aigc" data-aigc-kind="ad" hidden="">
+            <div class="project-cover project-video-player">
+              <button class="video-launch" type="button" data-video-src="assets/aigc-jinnong-web.webm" data-video-poster="assets/jinnong-web.webp" data-video-title="Jin Nong's Plum Blossom Album · Promotional Film" aria-label="Play Jin Nong's Plum Blossom Album" data-i18n-attrs="{&quot;aria-label&quot;:&quot;播放金农梅花册官方宣发视频&quot;,&quot;data-video-title&quot;:&quot;《金农梅花册》官方宣发视频&quot;}">
+                <img loading="lazy" decoding="async" src="assets/jinnong-web.webp" alt="Jin Nong's Plum Blossom Album: visual" data-i18n-attrs="{&quot;alt&quot;:&quot;金农梅花册项目视觉&quot;}">
+                <span data-i18n="播放完整视频">Play Full Film</span>
+              </button>
+            </div>
+            <div class="project-body">
+              <p class="eyebrow">AI COMMERCIAL · 2024</p>
+              <h2 data-i18n="《金农梅花册》">Jin Nong's Plum Blossom Album</h2>
+              <p data-i18n="负责杭州西泠印社《金农梅花册》宣发视频项目，使用 Midjourney、可灵、Runway 等 AIGC 工具进行创意构思、 单帧生成、动态化、剪辑与后期处理，打造兼具艺术感与效率的全 AI 视频流程。">A promotional film for Jin Nong's Plum Blossom Album at Xiling Yinshe, Hangzhou. Midjourney, Kling and Runway supported concept development, frame generation, animation, editing and post-production within an AI-based workflow.</p>
+              <dl class="project-meta">
+                <div><dt data-i18n="成果">Recognition</dt><dd data-i18n="省特等奖 / 全国三等奖">Provincial Grand Prize / National Third Prize</dd></div>
+                <div><dt data-i18n="职责">Role</dt><dd data-i18n="创意、分镜、提示词、动态生成、剪辑">Concept, storyboards, prompts, motion generation and editing</dd></div>
+                <div><dt data-i18n="工具">Tools</dt><dd data-i18n="ChatGPT / MJ / SD / Runway / 可灵 / Topaz">ChatGPT / MJ / SD / Runway / Kling / Topaz</dd></div>
+              </dl>
+            </div>
+          </article>
+
+          <article class="project-detail reverse" id="project-payment" data-category-item="aigc" data-aigc-kind="ad" hidden="">
+            <div class="project-cover project-video-player">
+              <button class="video-launch" type="button" data-video-src="assets/aigc-payment-web.webm" data-video-poster="assets/aigc-payment-title.jpg" data-video-title="Payment Without Borders" aria-label="Play Payment Without Borders" data-i18n-attrs="{&quot;aria-label&quot;:&quot;播放无界支付 AI 广告&quot;,&quot;data-video-title&quot;:&quot;《无界支付》&quot;}">
+                <img loading="lazy" decoding="async" src="assets/aigc-payment-title.jpg" alt="Payment Without Borders: title frame" data-i18n-attrs="{&quot;alt&quot;:&quot;无界支付视频标题画面&quot;}">
+                <span data-i18n="播放完整视频">Play Full Film</span>
+              </button>
+            </div>
+            <div class="project-body">
+              <p class="eyebrow">AI COMMERCIAL</p>
+              <h2 data-i18n="《无界支付》">Payment Without Borders</h2>
+              <p data-i18n="以 AI 多风格画面能力构建跨时代叙事，在复古未来、魔法、中世纪等视觉体系中呈现人物遇到阻碍后快速解决问题的故事， 最终回到现实，传达银行卡付款无限制的概念。">An AI-generated journey through retro-futurist, magical and medieval worlds. Characters overcome obstacles before returning to the present, expressing the idea of payment without borders.</p>
+              <dl class="project-meta">
+                <div><dt data-i18n="成果">Recognition</dt><dd data-i18n="第 23 届上海国际大学生广告节入围">Shortlisted, 23rd Shanghai International College Student Advertising Festival</dd></div>
+                <div><dt data-i18n="职责">Role</dt><dd data-i18n="AI 生图 / 视频生成 / 叙事剪辑">AI image generation / Video generation / Narrative editing</dd></div>
+                <div><dt data-i18n="工具">Tools</dt><dd>Midjourney / Runway</dd></div>
+              </dl>
+            </div>
+          </article>
+
+          <article class="project-detail" id="project-daynight" data-category-item="aigc" data-aigc-kind="ad" hidden="">
+            <div class="project-cover project-video-player">
+              <button class="video-launch" type="button" data-video-src="assets/aigc-daynight-web.webm" data-video-poster="assets/aigc-daynight-title.jpg" data-video-title="Core of Day and Night" aria-label="Play Core of Day and Night" data-i18n-attrs="{&quot;aria-label&quot;:&quot;播放昼夜之核 AI 广告&quot;,&quot;data-video-title&quot;:&quot;《昼夜之核》&quot;}">
+                <img loading="lazy" decoding="async" src="assets/aigc-daynight-title.jpg" alt="Core of Day and Night: title frame" data-i18n-attrs="{&quot;alt&quot;:&quot;昼夜之核视频标题画面&quot;}">
+                <span data-i18n="播放完整视频">Play Full Film</span>
+              </button>
+            </div>
+            <div class="project-body">
+              <p class="eyebrow">AI COMMERCIAL</p>
+              <h2 data-i18n="《昼夜之核》">Core of Day and Night</h2>
+              <p data-i18n="以宇宙七十亿年的时间尺度类比企业“七十年，专注做一颗好电池”，以宇宙爆发之初的能量映射电池所蕴含的能量， 通过 AIGC 将宏观宇宙意象与品牌产品叙事连接起来。">Cosmic imagery draws a parallel between seven billion years of the universe and a brand's seventy years of battery-making. AIGC connects the energy of the early universe with the product narrative.</p>
+              <dl class="project-meta">
+                <div><dt data-i18n="成果">Recognition</dt><dd data-i18n="学院奖 2024 春季征集大赛参赛作品">Entry, 2024 Spring Academy Awards Competition</dd></div>
+                <div><dt data-i18n="方向">Focus</dt><dd data-i18n="AI 广告 / 品牌概念叙事">AI commercial / Brand concept storytelling</dd></div>
+                <div><dt data-i18n="形式">Format</dt><dd data-i18n="AIGC 视觉生成 / 动态合成 / 后期剪辑">AI visual generation / Motion compositing / Post-production editing</dd></div>
+              </dl>
+            </div>
+          </article>
+        </details>
+
+<article class="case-layout project-detail project-gallery-detail photography-layout" id="project-photography" data-category-item="photography" hidden="">
+          <div class="project-body case-heading">
+            <div class="case-title case-title-long">
+              <p class="eyebrow">06 / PHOTOGRAPHY</p>
+              <h2 data-i18n="风光与空间摄影">Landscape &amp; Space</h2>
+              <p class="case-subtitle" data-i18n="光线、环境与空间观察">Observations of light, environment and space</p>
+            </div>
+            <div class="case-intro">
+              <p data-i18n="关注自然光线、空间层次与旅途中的瞬间秩序，用克制构图记录环境情绪。">Restrained compositions explore natural light, spatial depth and fleeting order encountered while travelling, capturing the mood of each environment.</p>
+            </div>
             <dl class="project-meta">
-              <div><dt>方向</dt><dd>风光 / 城市 / 空间</dd></div>
-              <div><dt>内容</dt><dd>个人长期摄影记录</dd></div>
+              <div><dt data-i18n="方向">Focus</dt><dd data-i18n="风光 / 城市 / 空间">Landscape / City / Space</dd></div>
+              <div><dt data-i18n="内容">Collection</dt><dd data-i18n="个人长期摄影记录">An ongoing personal photography practice</dd></div>
             </dl>
           </div>
-          <div class="photography-editorial" aria-label="摄影作品画廊">
-            <button class="photography-feature" type="button" data-lightbox="assets/photo-river-sunset-web.webp" aria-label="放大查看河流落日摄影">
-              <img loading="lazy" decoding="async" src="assets/photo-river-sunset-web.webp" alt="河流落日风光摄影" />
+          <div class="photography-editorial" aria-label="Photography Gallery" data-i18n-attrs="{&quot;aria-label&quot;:&quot;摄影作品画廊&quot;}">
+            <button class="photography-feature" type="button" data-lightbox="assets/photo-river-sunset-web.webp" aria-label="Enlarge River at Sunset" data-i18n-attrs="{&quot;aria-label&quot;:&quot;放大查看河流落日摄影&quot;}">
+              <img loading="lazy" decoding="async" src="assets/photo-river-sunset-web.webp" alt="River at sunset" data-i18n-attrs="{&quot;alt&quot;:&quot;河流落日风光摄影&quot;}">
               <span>01 / RIVER AT DUSK</span>
             </button>
             <div class="photography-portraits">
-              <button type="button" data-lightbox="assets/photo-city-overlook-web.webp" aria-label="放大查看城市俯瞰摄影"><img loading="lazy" decoding="async" src="assets/photo-city-overlook-web.webp" alt="城市俯瞰摄影" /><span>02 / CITY</span></button>
-              <button type="button" data-lightbox="assets/photo-snow-street-web.webp" aria-label="放大查看雪中街道摄影"><img loading="lazy" decoding="async" src="assets/photo-snow-street-web.webp" alt="雪中街道摄影" /><span>03 / SNOW</span></button>
-              <button type="button" data-lightbox="assets/photo-tree-sunset-web.webp" aria-label="放大查看树与落日摄影"><img loading="lazy" decoding="async" src="assets/photo-tree-sunset-web.webp" alt="树与落日摄影" /><span>04 / SUNSET</span></button>
+              <button type="button" data-lightbox="assets/photo-city-overlook-web.webp" aria-label="Enlarge City from Above" data-i18n-attrs="{&quot;aria-label&quot;:&quot;放大查看城市俯瞰摄影&quot;}"><img loading="lazy" decoding="async" src="assets/photo-city-overlook-web.webp" alt="City from above" data-i18n-attrs="{&quot;alt&quot;:&quot;城市俯瞰摄影&quot;}"><span>02 / CITY</span></button>
+              <button type="button" data-lightbox="assets/photo-snow-street-web.webp" aria-label="Enlarge Street in the Snow" data-i18n-attrs="{&quot;aria-label&quot;:&quot;放大查看雪中街道摄影&quot;}"><img loading="lazy" decoding="async" src="assets/photo-snow-street-web.webp" alt="Street in the snow" data-i18n-attrs="{&quot;alt&quot;:&quot;雪中街道摄影&quot;}"><span>03 / SNOW</span></button>
+              <button type="button" data-lightbox="assets/photo-tree-sunset-web.webp" aria-label="Enlarge Tree at Sunset" data-i18n-attrs="{&quot;aria-label&quot;:&quot;放大查看树与落日摄影&quot;}"><img loading="lazy" decoding="async" src="assets/photo-tree-sunset-web.webp" alt="Tree at sunset" data-i18n-attrs="{&quot;alt&quot;:&quot;树与落日摄影&quot;}"><span>04 / SUNSET</span></button>
             </div>
           </div>
         </article>
 
-        <article class="project-detail project-gallery-detail grouped-visual-layout" id="project-other" data-category-item="other" hidden>
-          <div class="project-body">
-            <p class="eyebrow">OTHER WORKS</p>
-            <h2>综合视觉创作</h2>
-            <p>收录 AR 城市合成、“桃你欢心”品牌视觉、AE 动效练习与多媒介视觉实验。</p>
+<article class="case-layout project-detail project-gallery-detail grouped-visual-layout" id="project-other" data-category-item="other" hidden="">
+          <div class="project-body case-heading">
+            <div class="case-title case-title-long">
+              <p class="eyebrow">07 / VISUAL STUDIES</p>
+              <h2 data-i18n="综合视觉创作">Visual Studies</h2>
+              <p class="case-subtitle" data-i18n="AR 合成 / 品牌视觉 / 多媒介实践">AR compositing / Brand visuals / Mixed-media practice</p>
+            </div>
+            <div class="case-intro">
+              <p data-i18n="收录 AR 城市合成、“桃你欢心”品牌视觉、AE 动效练习与多媒介视觉实验。">A collection of AR city composites, Taoyou brand visuals, After Effects motion studies and experiments across media.</p>
+            </div>
             <dl class="project-meta">
-              <div><dt>方向</dt><dd>Graphic / 3D / AR / UE</dd></div>
-              <div><dt>形式</dt><dd>视觉提案 / 概念实验 / 课程创作</dd></div>
+              <div><dt data-i18n="方向">Focus</dt><dd>Graphic / 3D / AR / UE</dd></div>
+              <div><dt data-i18n="形式">Format</dt><dd data-i18n="视觉提案 / 概念实验 / 课程创作">Visual proposals / Concept experiments / Coursework</dd></div>
             </dl>
           </div>
           <div class="visual-series-stack">
             <section class="visual-series" aria-labelledby="ar-series-title">
               <header class="visual-series-header">
-                <div><span>01 / COMPOSITING</span><h3 id="ar-series-title">AR 城市合成</h3></div>
+                <div><span>01 / COMPOSITING</span><h3 id="ar-series-title" data-i18n="AR 城市合成">AR City Composites</h3></div>
                 <small>6 VISUAL STUDIES</small>
               </header>
               <div class="visual-series-grid ar-series-grid">
-                <button type="button" data-lightbox="assets/ar-city-day-web.webp" aria-label="放大查看 AR 城市日景合成"><img loading="lazy" decoding="async" src="assets/ar-city-day-web.webp" alt="AR 城市日景视觉合成" /></button>
-                <button type="button" data-lightbox="assets/ar-city-street-web.webp" aria-label="放大查看 AR 城市街景合成"><img loading="lazy" decoding="async" src="assets/ar-city-street-web.webp" alt="AR 城市街景视觉合成" /></button>
-                <button type="button" data-lightbox="assets/ar-city-traffic-web.webp" aria-label="放大查看 AR 城市交通合成"><img loading="lazy" decoding="async" src="assets/ar-city-traffic-web.webp" alt="AR 城市交通视觉合成" /></button>
-                <button type="button" data-lightbox="assets/ar-city-skyline-web.webp" aria-label="放大查看 AR 城市天际线合成"><img loading="lazy" decoding="async" src="assets/ar-city-skyline-web.webp" alt="AR 城市天际线视觉合成" /></button>
-                <button type="button" data-lightbox="assets/ar-city-night-web.webp" aria-label="放大查看 AR 城市夜景合成"><img loading="lazy" decoding="async" src="assets/ar-city-night-web.webp" alt="AR 城市夜景视觉合成" /></button>
-                <button type="button" data-lightbox="assets/ar-city-highrise-web.webp" aria-label="放大查看 AR 城市高楼合成"><img loading="lazy" decoding="async" src="assets/ar-city-highrise-web.webp" alt="AR 城市高楼视觉合成" /></button>
+                <button type="button" data-lightbox="assets/ar-city-day-web.webp" aria-label="Enlarge AR City: Daylight" data-i18n-attrs="{&quot;aria-label&quot;:&quot;放大查看 AR 城市日景合成&quot;}"><img loading="lazy" decoding="async" src="assets/ar-city-day-web.webp" alt="AR city composite: daylight" data-i18n-attrs="{&quot;alt&quot;:&quot;AR 城市日景视觉合成&quot;}"></button>
+                <button type="button" data-lightbox="assets/ar-city-street-web.webp" aria-label="Enlarge AR City: Street" data-i18n-attrs="{&quot;aria-label&quot;:&quot;放大查看 AR 城市街景合成&quot;}"><img loading="lazy" decoding="async" src="assets/ar-city-street-web.webp" alt="AR city composite: street" data-i18n-attrs="{&quot;alt&quot;:&quot;AR 城市街景视觉合成&quot;}"></button>
+                <button type="button" data-lightbox="assets/ar-city-traffic-web.webp" aria-label="Enlarge AR City: Traffic" data-i18n-attrs="{&quot;aria-label&quot;:&quot;放大查看 AR 城市交通合成&quot;}"><img loading="lazy" decoding="async" src="assets/ar-city-traffic-web.webp" alt="AR city composite: traffic" data-i18n-attrs="{&quot;alt&quot;:&quot;AR 城市交通视觉合成&quot;}"></button>
+                <button type="button" data-lightbox="assets/ar-city-skyline-web.webp" aria-label="Enlarge AR City: Skyline" data-i18n-attrs="{&quot;aria-label&quot;:&quot;放大查看 AR 城市天际线合成&quot;}"><img loading="lazy" decoding="async" src="assets/ar-city-skyline-web.webp" alt="AR city composite: skyline" data-i18n-attrs="{&quot;alt&quot;:&quot;AR 城市天际线视觉合成&quot;}"></button>
+                <button type="button" data-lightbox="assets/ar-city-night-web.webp" aria-label="Enlarge AR City: Night" data-i18n-attrs="{&quot;aria-label&quot;:&quot;放大查看 AR 城市夜景合成&quot;}"><img loading="lazy" decoding="async" src="assets/ar-city-night-web.webp" alt="AR city composite: night" data-i18n-attrs="{&quot;alt&quot;:&quot;AR 城市夜景视觉合成&quot;}"></button>
+                <button type="button" data-lightbox="assets/ar-city-highrise-web.webp" aria-label="Enlarge AR City: Towers" data-i18n-attrs="{&quot;aria-label&quot;:&quot;放大查看 AR 城市高楼合成&quot;}"><img loading="lazy" decoding="async" src="assets/ar-city-highrise-web.webp" alt="AR city composite: towers" data-i18n-attrs="{&quot;alt&quot;:&quot;AR 城市高楼视觉合成&quot;}"></button>
               </div>
             </section>
             <section class="visual-series" aria-labelledby="brand-series-title">
               <header class="visual-series-header">
-                <div><span>02 / BRAND VISUAL</span><h3 id="brand-series-title">桃你欢心品牌视觉</h3></div>
+                <div><span>02 / BRAND VISUAL</span><h3 id="brand-series-title" data-i18n="桃你欢心品牌视觉">Taoyou Brand Visuals</h3></div>
                 <small>3 KEY VISUALS</small>
               </header>
               <div class="visual-series-grid brand-series-grid">
-                <button type="button" data-lightbox="assets/brand-taoyou-green-web.webp" aria-label="放大查看桃你欢心绿色主视觉"><img loading="lazy" decoding="async" src="assets/brand-taoyou-green-web.webp" alt="桃你欢心绿色品牌主视觉" /></button>
-                <button type="button" data-lightbox="assets/brand-taoyou-pink-web.webp" aria-label="放大查看桃你欢心粉色海报"><img loading="lazy" decoding="async" src="assets/brand-taoyou-pink-web.webp" alt="桃你欢心粉色品牌海报" /></button>
-                <button type="button" data-lightbox="assets/brand-taoyou-banner-web.webp" aria-label="放大查看桃你欢心横幅"><img loading="lazy" decoding="async" src="assets/brand-taoyou-banner-web.webp" alt="桃你欢心品牌横幅" /></button>
+                <button type="button" data-lightbox="assets/brand-taoyou-green-web.webp" aria-label="Enlarge Taoyou Green Brand Visual" data-i18n-attrs="{&quot;aria-label&quot;:&quot;放大查看桃你欢心绿色主视觉&quot;}"><img loading="lazy" decoding="async" src="assets/brand-taoyou-green-web.webp" alt="Taoyou: green brand visual" data-i18n-attrs="{&quot;alt&quot;:&quot;桃你欢心绿色品牌主视觉&quot;}"></button>
+                <button type="button" data-lightbox="assets/brand-taoyou-pink-web.webp" aria-label="Enlarge Taoyou Pink Poster" data-i18n-attrs="{&quot;aria-label&quot;:&quot;放大查看桃你欢心粉色海报&quot;}"><img loading="lazy" decoding="async" src="assets/brand-taoyou-pink-web.webp" alt="Taoyou: pink brand poster" data-i18n-attrs="{&quot;alt&quot;:&quot;桃你欢心粉色品牌海报&quot;}"></button>
+                <button type="button" data-lightbox="assets/brand-taoyou-banner-web.webp" aria-label="Enlarge Taoyou Brand Banner" data-i18n-attrs="{&quot;aria-label&quot;:&quot;放大查看桃你欢心横幅&quot;}"><img loading="lazy" decoding="async" src="assets/brand-taoyou-banner-web.webp" alt="Taoyou: brand banner" data-i18n-attrs="{&quot;alt&quot;:&quot;桃你欢心品牌横幅&quot;}"></button>
               </div>
+            </section>
+            <section class="visual-series" id="project-ae-studies" data-category-item="other" aria-labelledby="ae-series-title" hidden="">
+              <header class="visual-series-header">
+                <div><span>03 / AFTER EFFECTS</span><h3 id="ae-series-title" data-i18n="AE 动效练习">After Effects Studies</h3></div>
+                <small data-i18n="5 项动效练习">5 MOTION STUDIES</small>
+              </header>
+              <details class="ae-studies-archive">
+                <summary>
+                  <span class="ae-studies-expand" data-i18n="展开练习作品">View Studies</span>
+                  <span class="ae-studies-collapse" data-i18n="收起练习作品">Hide Studies</span>
+                  <span class="ae-studies-chevron" aria-hidden="true">⌄</span>
+                </summary>
+                <div class="ae-studies-content">
+                  <p class="ae-studies-intro" data-i18n="围绕动态图形、粒子效果、合成节奏与视觉风格完成的阶段性练习。">Studies exploring motion graphics, particle effects, compositing rhythm and visual style.</p>
+                  <div class="video-library-grid ae-library-grid">
+            <article class="video-library-card"><button class="video-launch" type="button" data-video-src="assets/ae-study-01-web.webm" data-video-poster="assets/ae-study-01-poster-web.webp" data-video-title="Motion Graphics" aria-label="Play Motion Graphics" data-i18n-attrs="{&quot;aria-label&quot;:&quot;播放动态图形练习&quot;,&quot;data-video-title&quot;:&quot;动态图形练习&quot;}"><img loading="lazy" decoding="async" src="assets/ae-study-01-poster-web.webp" alt="Motion Graphics: video poster" data-i18n-attrs="{&quot;alt&quot;:&quot;动态图形练习视频封面&quot;}"><span data-i18n="播放">Play</span></button><div><span>STUDY 01</span><h3 data-i18n="动态图形练习">Motion Graphics</h3></div></article>
+            <article class="video-library-card"><button class="video-launch" type="button" data-video-src="assets/ae-study-02-web.webm" data-video-poster="assets/ae-study-02-poster-web.webp" data-video-title="Visual Compositing" aria-label="Play Visual Compositing" data-i18n-attrs="{&quot;aria-label&quot;:&quot;播放视觉合成练习&quot;,&quot;data-video-title&quot;:&quot;视觉合成练习&quot;}"><img loading="lazy" decoding="async" src="assets/ae-study-02-poster-web.webp" alt="Visual Compositing: video poster" data-i18n-attrs="{&quot;alt&quot;:&quot;视觉合成练习视频封面&quot;}"><span data-i18n="播放">Play</span></button><div><span>STUDY 02</span><h3 data-i18n="视觉合成练习">Visual Compositing</h3></div></article>
+            <article class="video-library-card"><button class="video-launch" type="button" data-video-src="assets/ae-study-04-web.webm" data-video-poster="assets/ae-study-04-poster-web.webp" data-video-title="Particle Studies" aria-label="Play Particle Studies" data-i18n-attrs="{&quot;aria-label&quot;:&quot;播放粒子视觉练习&quot;,&quot;data-video-title&quot;:&quot;粒子视觉练习&quot;}"><img loading="lazy" decoding="async" src="assets/ae-study-04-poster-web.webp" alt="Particle Studies: video poster" data-i18n-attrs="{&quot;alt&quot;:&quot;粒子视觉练习视频封面&quot;}"><span data-i18n="播放">Play</span></button><div><span>STUDY 03</span><h3 data-i18n="粒子视觉练习">Particle Studies</h3></div></article>
+            <article class="video-library-card"><button class="video-launch" type="button" data-video-src="assets/ae-study-05-web.webm" data-video-poster="assets/ae-study-05-poster-web.webp" data-video-title="Transitions" aria-label="Play Transitions" data-i18n-attrs="{&quot;aria-label&quot;:&quot;播放画面转场练习&quot;,&quot;data-video-title&quot;:&quot;画面转场练习&quot;}"><img loading="lazy" decoding="async" src="assets/ae-study-05-poster-web.webp" alt="Transitions: video poster" data-i18n-attrs="{&quot;alt&quot;:&quot;画面转场练习视频封面&quot;}"><span data-i18n="播放">Play</span></button><div><span>STUDY 04</span><h3 data-i18n="画面转场练习">Transitions</h3></div></article>
+            <article class="video-library-card"><button class="video-launch" type="button" data-video-src="assets/ae-study-06-web.webm" data-video-poster="assets/ae-study-06-poster-web.webp" data-video-title="Combined Effects" aria-label="Play Combined Effects" data-i18n-attrs="{&quot;aria-label&quot;:&quot;播放综合效果练习&quot;,&quot;data-video-title&quot;:&quot;综合效果练习&quot;}"><img loading="lazy" decoding="async" src="assets/ae-study-06-poster-web.webp" alt="Combined Effects: video poster" data-i18n-attrs="{&quot;alt&quot;:&quot;综合效果练习视频封面&quot;}"><span data-i18n="播放">Play</span></button><div><span>STUDY 05</span><h3 data-i18n="综合效果练习">Combined Effects</h3></div></article>
+                  </div>
+                </div>
+              </details>
             </section>
           </div>
         </article>
-
-        <section class="project-library" id="project-ae-studies" data-category-item="other" hidden>
-          <div class="library-heading">
-            <p class="eyebrow">AFTER EFFECTS STUDIES</p>
-            <h2>AE 动效练习</h2>
-            <p>围绕动态图形、粒子效果、合成节奏与视觉风格完成的阶段性练习。</p>
-          </div>
-          <div class="video-library-grid ae-library-grid">
-            <article class="video-library-card"><button class="video-launch" type="button" data-video-src="assets/ae-study-01-web.webm" data-video-poster="assets/ae-study-01-poster-web.webp" data-video-title="动态图形练习" aria-label="播放动态图形练习"><img loading="lazy" decoding="async" src="assets/ae-study-01-poster-web.webp" alt="动态图形练习视频封面" /><span>播放</span></button><div><span>STUDY 01</span><h3>动态图形练习</h3></div></article>
-            <article class="video-library-card"><button class="video-launch" type="button" data-video-src="assets/ae-study-02-web.webm" data-video-poster="assets/ae-study-02-poster-web.webp" data-video-title="视觉合成练习" aria-label="播放视觉合成练习"><img loading="lazy" decoding="async" src="assets/ae-study-02-poster-web.webp" alt="视觉合成练习视频封面" /><span>播放</span></button><div><span>STUDY 02</span><h3>视觉合成练习</h3></div></article>
-            <article class="video-library-card"><button class="video-launch" type="button" data-video-src="assets/ae-study-04-web.webm" data-video-poster="assets/ae-study-04-poster-web.webp" data-video-title="粒子视觉练习" aria-label="播放粒子视觉练习"><img loading="lazy" decoding="async" src="assets/ae-study-04-poster-web.webp" alt="粒子视觉练习视频封面" /><span>播放</span></button><div><span>STUDY 03</span><h3>粒子视觉练习</h3></div></article>
-            <article class="video-library-card"><button class="video-launch" type="button" data-video-src="assets/ae-study-05-web.webm" data-video-poster="assets/ae-study-05-poster-web.webp" data-video-title="画面转场练习" aria-label="播放画面转场练习"><img loading="lazy" decoding="async" src="assets/ae-study-05-poster-web.webp" alt="画面转场练习视频封面" /><span>播放</span></button><div><span>STUDY 04</span><h3>画面转场练习</h3></div></article>
-            <article class="video-library-card"><button class="video-launch" type="button" data-video-src="assets/ae-study-06-web.webm" data-video-poster="assets/ae-study-06-poster-web.webp" data-video-title="综合效果练习" aria-label="播放综合效果练习"><img loading="lazy" decoding="async" src="assets/ae-study-06-poster-web.webp" alt="综合效果练习视频封面" /><span>播放</span></button><div><span>STUDY 05</span><h3>综合效果练习</h3></div></article>
-          </div>
-        </section>
       </section>
 
-      <section class="section about-section" id="about">
-        <div class="about-layout">
-          <div class="about-lead">
-            <p class="eyebrow">ABOUT</p>
-            <h2>AIGC visual creator with a production mindset.</h2>
-            <p>
-              宋梓铭，数字媒体艺术方向。关注 AI 影像、短片叙事和视觉合成，把想法从分镜推进到可交付的视频作品。
-            </p>
-          </div>
-          <div class="about-copy">
-            <div class="about-row">
-              <span>Background</span>
-              <p>浙江传媒学院<br />数字媒体艺术专业</p>
-            </div>
-            <div class="about-row">
-              <span>Direction</span>
-              <p>AI 短剧、影视广告、微电影、舞台视觉与 AIGC 宣发视频。</p>
-            </div>
-            <div class="about-row">
-              <span>Workflow</span>
-              <p>创意定位、脚本分镜、AI 视觉生成、剪辑合成、调色与输出。</p>
-            </div>
-            <div class="about-row">
-              <span>Style</span>
-              <p>偏电影感、强氛围和清晰叙事，重视画面统一和节奏控制。</p>
-            </div>
-          </div>
+      <section class="section portfolio-about" id="about">
+        <div class="portfolio-section-heading">
+          <p class="eyebrow">ABOUT</p>
+          <h2 data-i18n="关于我">About Me</h2>
         </div>
+        <div class="creator-statement">
+          <p class="creator-lead" data-i18n="我是宋梓铭。我的创作横跨实拍影像、生成式影像与舞台视觉，关注画面如何通过节奏与空间组织，形成不同的叙事与观看体验。">I am Song Ziming. My practice spans live-action filmmaking, generative imagery and stage visuals. I explore how rhythm and spatial composition shape stories and the experience of watching them.</p>
 
-        <div class="stats-grid about-stats">
-          <div><strong>2026</strong><span>Graduate</span></div>
-          <div><strong>10+</strong><span>Awards & Projects</span></div>
-          <div><strong>AI Film</strong><span>Main Direction</span></div>
-          <div><strong>Full</strong><span>Workflow Ability</span></div>
+          <p data-i18n="从影视广告中的导演与制片，到短剧剪辑和舞台投影设计，我尝试在不同媒介中寻找适合故事的表达方式。工具与技术是创作的一部分，而画面的情绪、叙事的节奏和观看的感受，是我持续关注的方向。">From directing and producing commercials to editing short-form dramas and designing stage projections, I look for forms that serve each story. Tools and technology are part of the process; mood, narrative rhythm and the viewer's experience remain my focus.</p>
+
         </div>
       </section>
 
-      <section class="section split-section" id="services">
-        <div class="section-heading vertical">
-          <p class="eyebrow">CAPABILITIES</p>
-          <h2>可提供的创作服务</h2>
-          <p class="title-translation">Creative Services</p>
-          <p>适用于招聘作品展示、品牌宣发、舞台视觉、短片开发和 AI 影像工作流协作。</p>
-        </div>
-        <div class="service-list">
-          <article>
-            <h3>AI 短片 / 短剧制作</h3>
-            <p>角色、场景、分镜、图片动态化、视频合成与剪辑。</p>
-          </article>
-          <article>
-            <h3>广告片创意与制作</h3>
-            <p>品牌命题拆解、创意脚本、视觉提案、拍摄与后期包装。</p>
-          </article>
-          <article>
-            <h3>舞台视觉与沉浸影像</h3>
-            <p>曲目主题视觉、投影内容、数字人形象、现场视觉调试。</p>
-          </article>
-          <article>
-            <h3>AIGC 视觉开发</h3>
-            <p>概念图、风格帧、AI 海报、动态视觉实验和工作流搭建。</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section workflow" id="workflow">
-        <p class="eyebrow">WORKFLOW</p>
-        <h2>从创意到成片的 AI 影像流程</h2>
-        <p class="title-translation">AI Video Production Workflow</p>
-        <div class="workflow-track">
-          <div><span>01</span><h3>创意定位</h3><p>明确主题、受众、视觉基调与交付目标。</p></div>
-          <div><span>02</span><h3>脚本分镜</h3><p>将叙事拆解为镜头、节奏和画面提示词。</p></div>
-          <div><span>03</span><h3>视觉生成</h3><p>使用 AI 生成角色、场景、风格帧与关键画面。</p></div>
-          <div><span>04</span><h3>动态合成</h3><p>完成图生视频、特效合成、调色、剪辑与声音节奏。</p></div>
-          <div><span>05</span><h3>交付优化</h3><p>统一画面风格，按平台和客户反馈完成修改输出。</p></div>
-        </div>
-      </section>
-
-      <section class="section resume-section" id="resume">
-        <div class="resume-intro">
-          <p class="eyebrow">RESUME</p>
-          <h2>经历与荣誉</h2>
-          <p class="title-translation">Experience & Awards</p>
-          <p>聚焦 AIGC 影像项目、舞台视觉执行与数字艺术设计竞赛成果。</p>
-        </div>
-        <div class="timeline resume-compact">
-          <div class="resume-group">
-            <h3>项目经历</h3>
-            <article>
+      <section class="section portfolio-background" id="resume" aria-label="Projects and Recognition" data-i18n-attrs="{&quot;aria-label&quot;:&quot;项目与荣誉记录&quot;}">
+        <div class="record-columns">
+          <div class="record-group">
+            <h3 data-i18n="项目记录">Projects &amp; Experience</h3>
+<article>
               <time>2026.01 - 2026.06</time>
               <div>
-                <h4>北广新融（北京）传媒科技有限公司</h4>
-                <p>AIGC 全流程制作，统筹 AI 漫剧角色、场景、动态图像与视频合成剪辑。</p>
+                <h4 data-i18n="北广新融（北京）传媒科技有限公司">Beiguang Xinrong (Beijing) Media Technology</h4>
+
+                <p data-i18n="AIGC 全流程制作，统筹 AI 漫剧角色、场景、动态图像与视频合成剪辑。">Coordinated the full AIGC production workflow for AI animated dramas, including characters, scenes, animation, compositing and editing.</p>
+
               </div>
             </article>
-            <article>
+<article>
               <time>2026</time>
               <div>
-                <h4>杭州金沙湖大剧院《风华声脉》音乐会</h4>
-                <p>项目导演与视觉主创，负责舞台视觉方案、民俗符号转译与双纱幕投影体系。</p>
+                <h4 data-i18n="杭州金沙湖大剧院《风华声脉》音乐会">Elegant Rhythms of Legacy · Jinshahu Grand Theatre, Hangzhou</h4>
+
+                <p data-i18n="项目导演与视觉主创，负责舞台视觉方案、民俗符号转译与双纱幕投影体系。">Project director and lead visual creator, responsible for stage visuals, reinterpretation of folk motifs and a dual-scrim projection system.</p>
+
               </div>
             </article>
-            <article>
+<article>
               <time>2024</time>
               <div>
-                <h4>杭州西泠印社《金农梅花册》产品宣发视频</h4>
-                <p>AIGC 宣发视频实践，完成创意、提示词、动态生成、剪辑与后期输出。</p>
+                <h4 data-i18n="杭州西泠印社《金农梅花册》产品宣发视频">Jin Nong's Plum Blossom Album · Xiling Yinshe, Hangzhou</h4>
+
+                <p data-i18n="AIGC 宣发视频实践，完成创意、提示词、动态生成、剪辑与后期输出。">Created an AIGC promotional video, from concept and prompts to motion generation, editing and post-production.</p>
+
               </div>
             </article>
-            <article>
+<article>
               <time>2024</time>
               <div>
-                <h4>央视少儿频道《有趣的成语故事》</h4>
-                <p>团队核心成员，负责 DomoAI 动画风格转绘与 AE 后期特效修正。</p>
+                <h4 data-i18n="央视少儿频道《有趣的成语故事》">Interesting Stories of Chinese Idioms · CCTV Children's Channel</h4>
+
+                <p data-i18n="团队核心成员，负责 DomoAI 动画风格转绘与 AE 后期特效修正。">Core team member responsible for animation style transfer with DomoAI and effects refinement in After Effects.</p>
+
               </div>
             </article>
           </div>
-          <div class="resume-group">
-            <h3>荣誉奖项</h3>
-            <article>
+          <div class="record-group">
+            <h3 data-i18n="荣誉记录">Awards &amp; Recognition</h3>
+<article>
               <time>2025</time>
               <div>
-                <h4>第十七届全国大学生广告大赛</h4>
-                <p>《青筠时隐》获浙江省一等奖、全国二等奖。</p>
+                <h4 data-i18n="第十七届全国大学生广告大赛">17th National College Student Advertising Competition</h4>
+
+                <p data-i18n="《青筠时隐》获浙江省一等奖、全国二等奖。">Qingyun Shiyin: First Prize in Zhejiang Province; Second Prize nationally.</p>
+
               </div>
             </article>
-            <article>
+<article>
               <time>2025</time>
               <div>
-                <h4>第十三届未来设计师·全国高校数字艺术设计大赛</h4>
-                <p>浙江省一等奖。</p>
+                <h4 data-i18n="第十三届未来设计师·全国高校数字艺术设计大赛">13th Future Designer National College Digital Art &amp; Design Competition</h4>
+
+                <p data-i18n="浙江省一等奖。">First Prize in Zhejiang Province.</p>
+
               </div>
             </article>
-            <article>
+<article>
               <time>2024</time>
               <div>
-                <h4>全国三维数字化创新设计大赛 “AI＋3D” 专项赛</h4>
-                <p>浙江省特等奖、全国三等奖。</p>
+                <h4 data-i18n="全国三维数字化创新设计大赛 “AI＋3D” 专项赛">National 3D Digital Innovation Design Competition · AI + 3D Track</h4>
+
+                <p data-i18n="浙江省特等奖、全国三等奖。">Grand Prize in Zhejiang Province; Third Prize nationally.</p>
+
               </div>
             </article>
-            <article>
+<article>
               <time>2024</time>
               <div>
-                <h4>国家级大学生创新创业项目</h4>
-                <p>参与 AI 技术在动画行业融合发展与企业宣发视频生成相关项目。</p>
+                <h4 data-i18n="国家级大学生创新创业项目">National-Level College Student Innovation &amp; Entrepreneurship Project</h4>
+
+                <p data-i18n="参与 AI 技术在动画行业融合发展与企业宣发视频生成相关项目。">Participated in projects exploring AI integration in animation and the generation of corporate promotional videos.</p>
+
               </div>
             </article>
           </div>
         </div>
-        <a class="button button-dark" href="宋梓铭简历.pdf">下载完整 PDF 简历</a>
       </section>
 
-      <section class="section visual-lab" id="visuals">
-        <div>
-          <p class="eyebrow">VISUAL LAB</p>
-          <h2>视觉作品与工具栈</h2>
-          <p class="title-translation">Visual Works & Tool Stack</p>
-          <p>Photoshop、Premiere Pro、After Effects、TouchDesigner、Cinema 4D、DaVinci Resolve、Stable Diffusion、Midjourney、Runway、即梦、可灵。</p>
-        </div>
-        <div class="tool-cloud" aria-label="工具与能力">
-          <span>剪辑</span>
-          <span>合成</span>
-          <span>调色</span>
-          <span>动态图形</span>
-          <span>AI 绘画</span>
-          <span>图生视频</span>
-          <span>C4D 建模</span>
-          <span>UE 场景</span>
-          <span>风光摄影</span>
-        </div>
-      </section>
-
-      <section class="contact-section" id="contact">
-        <div>
+      <section class="section portfolio-contact" id="contact">
+        <div class="portfolio-section-heading">
           <p class="eyebrow">CONTACT</p>
-          <h2>如果你正在寻找一种更具未来感的影像表达，我们可以聊聊。</h2>
+          <h2 data-i18n="联系">Contact</h2>
         </div>
-        <div class="contact-card">
-          <a href="mailto:18179547835@163.com">18179547835@163.com</a>
-          <a href="tel:18867150630">18867150630</a>
-          <span>微信：m1261540076</span>
-          <p>可合作方向：AIGC 视频、影视后期、广告片、舞台视觉、品牌视觉短片。</p>
-        </div>
+        <dl class="contact-details">
+          <div><dt data-i18n="邮箱">Email</dt><dd><a href="mailto:18179547835@163.com">18179547835@163.com</a></dd></div>
+          <div><dt data-i18n="电话">Phone</dt><dd><a href="tel:18867150630">18867150630</a></dd></div>
+          <div><dt data-i18n="微信">WeChat</dt><dd>m1261540076</dd></div>
+          <div><dt data-i18n="简历">CV</dt><dd><a href="宋梓铭简历.pdf" class="contact-cv"><span class="i18n-copy" data-i18n="查看 PDF 简历">View CV (Chinese)</span><span aria-hidden="true">↗</span></a></dd></div>
+        </dl>
       </section>
     </main>
 
     <footer class="site-footer">
-      <span>© 2026 宋梓铭</span>
+      <span data-i18n="© 2026 宋梓铭">© 2026 Song Ziming</span>
+      <small class="font-credit"><a href="https://www.fontshare.com/fonts/general-sans" target="_blank" rel="noopener">General Sans</a> / <a href="assets/fonts/MiSans-license.pdf" target="_blank" rel="noopener">MiSans</a></small>
       <a href="#home">Back to top</a>
     </footer>
 
-    <dialog class="image-lightbox" data-lightbox-dialog aria-label="作品图片预览">
-      <button type="button" data-lightbox-close aria-label="关闭图片预览">×</button>
-      <img loading="lazy" decoding="async" data-lightbox-image alt="作品大图预览" />
+    <dialog class="image-lightbox" data-lightbox-dialog="" aria-label="Image Preview" data-i18n-attrs="{&quot;aria-label&quot;:&quot;作品图片预览&quot;}">
+      <button type="button" data-lightbox-close="" aria-label="Close Image Preview" data-i18n-attrs="{&quot;aria-label&quot;:&quot;关闭图片预览&quot;}">×</button>
+      <img loading="lazy" decoding="async" data-lightbox-image="" alt="Enlarged Image" data-i18n-attrs="{&quot;alt&quot;:&quot;作品大图预览&quot;}">
     </dialog>
 
-    <dialog class="video-lightbox" data-video-dialog aria-label="作品视频播放">
-      <button class="video-lightbox-close" type="button" data-video-close aria-label="关闭视频">×</button>
+    <dialog class="video-lightbox" data-video-dialog="" aria-label="Video Player" data-i18n-attrs="{&quot;aria-label&quot;:&quot;作品视频播放&quot;}">
+      <button class="video-lightbox-close" type="button" data-video-close="" aria-label="Close Video" data-i18n-attrs="{&quot;aria-label&quot;:&quot;关闭视频&quot;}">×</button>
       <div class="video-lightbox-frame">
-        <video controls playsinline preload="none" data-video-player></video>
+        <video controls="" playsinline="" preload="none" data-video-player=""></video>
       </div>
-      <p data-video-modal-title></p>
+      <p data-video-modal-title=""></p>
     </dialog>
 
+    <script src="translations.js"></script>
+    <script src="concert-translations.js"></script>
+    <script src="qingyun-translations.js"></script>
+    <script src="i18n.js"></script>
     <script src="script.js"></script>
+    <script src="home-entrance.js"></script>
   </body>
 </html>

@@ -3,6 +3,7 @@ const nav = document.querySelector("[data-nav]");
 const toggle = document.querySelector("[data-menu-toggle]");
 const hero = document.querySelector(".hero");
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const i18n = window.portfolioI18n;
 
 const updateHeader = () => {
   header.classList.toggle("is-scrolled", window.scrollY > 20);
@@ -127,6 +128,7 @@ const categoryItems = Array.from(document.querySelectorAll("[data-category-item]
 const categoryLinks = document.querySelectorAll("[data-category-link]");
 const categoryClose = document.querySelector("[data-category-close]");
 const aigcTabs = document.querySelector("[data-aigc-tabs]");
+const aigcArchive = document.querySelector("#aigc-archive");
 const aigcFilterButtons = Array.from(document.querySelectorAll("[data-aigc-filter]"));
 let activeCategory = null;
 let activeAigcFilter = "short";
@@ -162,7 +164,10 @@ const categoryContent = {
 const updateCategoryItems = () => {
   categoryItems.forEach((item) => {
     const isCategory = item.dataset.categoryItem === activeCategory;
-    const isAigcKind = activeCategory !== "aigc" || item.dataset.aigcKind === activeAigcFilter;
+    const isAigcKind = activeCategory !== "aigc"
+      || item.dataset.aigcKind === "featured"
+      || item.dataset.aigcKind === "archive"
+      || item.dataset.aigcKind === activeAigcFilter;
     const isCurrent = isCategory && isAigcKind;
     item.hidden = !isCurrent;
     if (isCurrent) item.classList.add("is-visible");
@@ -179,15 +184,21 @@ const setAigcFilter = (filter) => {
   updateCategoryItems();
 };
 
+const updateCategoryHeading = () => {
+  if (!categoryDetails || !activeCategory) return;
+  const content = categoryContent[activeCategory];
+  categoryDetails.querySelector("[data-category-kicker]").textContent = content.kicker;
+  categoryDetails.querySelector("[data-category-title]").textContent = i18n.t(content.title);
+  categoryDetails.querySelector("[data-category-description]").textContent = i18n.t(content.description);
+};
+
 const openCategory = (category) => {
   if (!categoryDetails || !categoryContent[category]) return;
   activeCategory = category;
-  const content = categoryContent[category];
-  categoryDetails.querySelector("[data-category-kicker]").textContent = content.kicker;
-  categoryDetails.querySelector("[data-category-title]").textContent = content.title;
-  categoryDetails.querySelector("[data-category-description]").textContent = content.description;
+  updateCategoryHeading();
   aigcTabs.hidden = category !== "aigc";
   if (category === "aigc") {
+    if (aigcArchive) aigcArchive.open = false;
     setAigcFilter("short");
   } else {
     updateCategoryItems();
@@ -221,6 +232,7 @@ if (categoryClose) {
 const videoDialog = document.querySelector("[data-video-dialog]");
 const videoPlayer = videoDialog?.querySelector("[data-video-player]");
 const videoModalTitle = videoDialog?.querySelector("[data-video-modal-title]");
+let activeVideoTrigger = null;
 
 const unloadVideo = () => {
   if (!videoPlayer) return;
@@ -228,13 +240,26 @@ const unloadVideo = () => {
   videoPlayer.removeAttribute("src");
   videoPlayer.removeAttribute("poster");
   videoPlayer.load();
+  activeVideoTrigger = null;
+};
+
+const syncConcertVersion = (switcher) => {
+  const option = switcher.querySelector("[data-concert-option].is-active");
+  const launch = switcher.querySelector("[data-concert-launch]");
+  const preview = launch?.querySelector("img");
+  const playLabel = launch?.querySelector("[data-concert-play-label]");
+  if (!option || !launch || !preview) return;
+  launch.dataset.videoSrc = option.dataset.concertVideo;
+  launch.dataset.videoPoster = option.dataset.concertPoster;
+  launch.dataset.videoTitle = option.dataset.concertTitle;
+  launch.setAttribute("aria-label", i18n.playLabel(option.dataset.concertTitle));
+  preview.src = option.dataset.concertPoster;
+  preview.alt = i18n.frameLabel(option.dataset.concertTitle);
+  if (playLabel) playLabel.textContent = i18n.t(option.dataset.concertVideo.includes("-full-") ? "播放现场完整版" : "播放预览版");
 };
 
 document.querySelectorAll("[data-concert-switcher]").forEach((switcher) => {
   const options = Array.from(switcher.querySelectorAll("[data-concert-option]"));
-  const launch = switcher.querySelector("[data-concert-launch]");
-  const preview = launch?.querySelector("img");
-  const playLabel = launch?.querySelector("[data-concert-play-label]");
 
   options.forEach((option) => {
     option.addEventListener("click", () => {
@@ -244,14 +269,7 @@ document.querySelectorAll("[data-concert-switcher]").forEach((switcher) => {
         item.setAttribute("aria-pressed", String(isActive));
       });
 
-      if (!launch || !preview) return;
-      launch.dataset.videoSrc = option.dataset.concertVideo;
-      launch.dataset.videoPoster = option.dataset.concertPoster;
-      launch.dataset.videoTitle = option.dataset.concertTitle;
-      launch.setAttribute("aria-label", `播放${option.dataset.concertTitle}`);
-      preview.src = option.dataset.concertPoster;
-      preview.alt = `${option.dataset.concertTitle}视频画面`;
-      if (playLabel) playLabel.textContent = option.dataset.concertTitle.includes("完整版") ? "播放现场完整版" : "播放预览版";
+      syncConcertVersion(switcher);
     });
   });
 });
@@ -259,9 +277,10 @@ document.querySelectorAll("[data-concert-switcher]").forEach((switcher) => {
 document.querySelectorAll("[data-video-src]").forEach((trigger) => {
   trigger.addEventListener("click", () => {
     if (!videoDialog || !videoPlayer) return;
+    activeVideoTrigger = trigger;
     videoPlayer.src = trigger.dataset.videoSrc;
     if (trigger.dataset.videoPoster) videoPlayer.poster = trigger.dataset.videoPoster;
-    if (videoModalTitle) videoModalTitle.textContent = trigger.dataset.videoTitle || "作品视频";
+    if (videoModalTitle) videoModalTitle.textContent = trigger.dataset.videoTitle || i18n.t("作品视频");
     videoPlayer.load();
     videoDialog.showModal();
     videoPlayer.play().catch(() => {});
@@ -276,11 +295,13 @@ videoDialog?.addEventListener("close", unloadVideo);
 
 const lightbox = document.querySelector("[data-lightbox-dialog]");
 const lightboxImage = lightbox?.querySelector("[data-lightbox-image]");
+let activeImageTrigger = null;
 
 document.querySelectorAll("[data-lightbox]").forEach((button) => {
   button.addEventListener("click", () => {
+    activeImageTrigger = button;
     lightboxImage.src = button.dataset.lightbox;
-    lightboxImage.alt = button.querySelector("img")?.alt || "作品大图预览";
+    lightboxImage.alt = button.querySelector("img")?.alt || i18n.t("作品大图预览");
     lightbox.showModal();
   });
 });
@@ -289,10 +310,18 @@ lightbox?.querySelector("[data-lightbox-close]")?.addEventListener("click", () =
 lightbox?.addEventListener("click", (event) => {
   if (event.target === lightbox) lightbox.close();
 });
+lightbox?.addEventListener("close", () => { activeImageTrigger = null; });
 
-const resumeSection = document.querySelector("#resume");
-const servicesSection = document.querySelector("#services");
-if (resumeSection && servicesSection) servicesSection.before(resumeSection);
+window.addEventListener("portfolio:languagechange", () => {
+  updateCategoryHeading();
+  document.querySelectorAll("[data-concert-switcher]").forEach(syncConcertVersion);
+  if (videoDialog?.open && activeVideoTrigger && videoModalTitle) {
+    videoModalTitle.textContent = activeVideoTrigger.dataset.videoTitle || i18n.t("作品视频");
+  }
+  if (lightbox?.open && activeImageTrigger && lightboxImage) {
+    lightboxImage.alt = activeImageTrigger.querySelector("img")?.alt || i18n.t("作品大图预览");
+  }
+});
 
 if (hero && !reduceMotion) {
   hero.addEventListener("pointermove", (event) => {

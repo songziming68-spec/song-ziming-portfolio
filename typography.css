@@ -1,0 +1,56 @@
+:root {
+  --portfolio-font: "General Sans", "MiSans", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  font-family: var(--portfolio-font);
+  font-synthesis: none;
+}
+
+body,
+button,
+input,
+select,
+textarea,
+h1,
+h2,
+h3,
+h4,
+.hero-copy,
+.hero-greeting,
+.hero .eyebrow,
+.section .eyebrow,
+.section-kicker,
+.workflow > .eyebrow,
+.contact-section .eyebrow,
+.title-translation {
+  font-family: var(--portfolio-font);
+}
+
+body { font-weight: 400; }
+h1, h2, h3, h4 { font-weight: 500; letter-spacing: 0; }
+strong, b { font-weight: 600; }
+.hero-greeting { font-weight: 600; }
+.title-translation { font-weight: 500; }
+
+h1,
+h2,
+.cinematic-meta h3,
+.visual-series-header h3 {
+  opacity: 0.88;
+}
+
+.case-title h2,
+.category-detail-heading h2,
+.portfolio-section-heading h2,
+.visual-series-header h3,
+.process-heading h3 {
+  text-wrap: balance;
+}
+
+.site-footer { align-items: center; flex-wrap: wrap; }
+.font-credit { font-size: 11px; line-height: 1.6; color: #828b95; }
+.font-credit a { color: inherit; }
+.font-credit a:hover { color: #d9dee4; }
+.font-credit a:focus-visible { outline: 2px solid #d9dee4; outline-offset: 4px; }
+
+@media (max-width: 640px) {
+  .site-footer { align-items: flex-start; }
+}
